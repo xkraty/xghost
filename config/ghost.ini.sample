@@ -1,0 +1,10 @@
+[credentials]
+email             = youremail
+password          = yourpassword
+
+[http_config]
+useragent         = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36"
+
+[url]
+login             = https://api.live-ca.callofduty.com/loginclient/
+user              = https://api.live-ca.ghosts.callofduty.com/user/
