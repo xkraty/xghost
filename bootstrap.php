@@ -37,7 +37,8 @@ define('CONTROLLERS', APPPATH . 'controllers' . DIRECTORY_SEPARATOR);
 define('VIEWS', APPPATH . 'views' . DIRECTORY_SEPARATOR);
 
 // Set the include path for libs
-set_include_path(LIBRARIES
+set_include_path(
+  LIBRARIES
   . PATH_SEPARATOR . VENDOR
 );
 
