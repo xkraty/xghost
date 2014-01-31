@@ -90,10 +90,12 @@ class xGhost {
             }
           }
           $_SESSION['xGhost']['user'] = $this->_user;
+          d($_SESSION, 1);
           return $this->_user;
         }
       }
     }
+    die('thats bad');
     return false;
   }
 
