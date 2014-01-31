@@ -40,8 +40,10 @@ class xGhost {
     d($config);
     if ( file_exists($config) ) {
       $this->_config = parse_ini_file($config, true);
+      d($this->_config);
       if ( $this->_config ) {
         $this->_client = new Client();
+        d('cloent up');
         $this->_client->setOptions($this->_config['http_config']);
 
         $this->_user = $this->getSession();
