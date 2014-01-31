@@ -1,0 +1,122 @@
+body {
+  background-color: #1D242C;
+  background-image: url(../img/bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.login {
+  height: 475px;
+}
+.login .title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.login .title h1 {
+  font-size: 40pt;
+}
+.login .wrap {
+  padding-top: 80px;
+}
+.login .form-wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.login .form-header {
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  background-color: #ffffff;
+}
+.login .form-header .logo {
+  font-size: 50px;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #E7E7E7;
+  padding: 15px 20px;
+  background: #f6f8f9;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(-45deg, #2F3B4B 0%, #29333F 50%, #282F37 51%, #f5f7f9 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #2F3B4B), color-stop(50%, #29333F), color-stop(51%, #282F37), color-stop(100%, #f5f7f9));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(-45deg, #2F3B4B 0%, #29333F 50%, #282F37 51%, #f5f7f9 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(-45deg, #2F3B4B 0%, #29333F 50%, #282F37 51%, #f5f7f9 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(-45deg, #2F3B4B 0%, #29333F 50%, #282F37 51%, #f5f7f9 100%);
+  /* IE10+ */
+
+  background: linear-gradient(135deg, #2F3B4B 0%, #29333F 50%, #282F37 51%, #f5f7f9 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f8f9', endColorstr='#f5f7f9', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+}
+.login .form-header .fa-user.fail {
+  color: #FF8479;
+  border: 3px solid #FF8479;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  -ms-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.login .form-header .fa-user.success {
+  color: #98CA4D;
+  border: 3px solid #98CA4D;
+  -webkit-transition: color 700ms linear;
+  -moz-transition: color 700ms linear;
+  -o-transition: color 700ms linear;
+  -ms-transition: color 700ms linear;
+  transition: color 700ms linear;
+}
+.login .form-main {
+  background-color: #505050;
+  padding: 40px 50px;
+}
+.login .form-footer {
+  background-color: #404040;
+  padding: 20px 50px;
+  color: #999999;
+  font-size: 10pt;
+}
+.login .signin {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FF8627;
+  color: #ffffff;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+.login .signin:hover {
+  background-color: #ff6610;
+}
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+  background-color: #404040;
+  padding-left: 20px;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 10px;
+  color: #cccccc;
+  height: 43px;
+}
+.login .bounceIn {
+  opacity: 1;
+}
+.login .fail {
+  animation: shake .5s linear;
+  -webkit-animation: shake .5s linear;
+  -moz-animation: shake .5s linear;
+}

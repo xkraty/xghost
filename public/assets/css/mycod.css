@@ -1,0 +1,946 @@
+/* new fixes */
+#ghosts-panel {
+  width: 400px;
+  margin-right: 30px;
+}
+#clan-panel {
+  width: 400px;
+}
+#mycod ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#mycod ul {
+  padding: 0;
+  margin: 0;
+}
+#mycod h3 {
+  display: block;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+/* mycod old & fixed */
+#mycod {
+  width: 850px;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+#mycod .default {
+  display: none;
+  padding: 15px;
+}
+#mycod .default.nologin {
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #aaaaaa;
+}
+#mycod .default.nologin a {
+  color: #6092bc;
+}
+#mycod .error_icon {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -110px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  display: block;
+  margin: 5px 15px 0 0;
+}
+#mycod .nostats {
+  padding: 12px 20px;
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #aaaaaa;
+}
+#mycod .nostats a {
+  color: #6092bc;
+}
+#mycod .myCodTabs {
+  height: 50px;
+  width: 100%;
+  padding: 6px 0;
+}
+#mycod .myCodTabs .tab {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: 7px;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 30 ")";
+  filter: alpha(opacity=30);
+  zoom: 1;
+  float: left;
+  position: relative;
+}
+#mycod .myCodTabs .tab.ghosts-tab {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+#mycod .myCodTabs .tab.clan-tab {
+  background-color: white;
+}
+#mycod .myCodTabs .tab.history-tab {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -54px;
+}
+#mycod .myCodTabs .tab.share-tab {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -88px -36px;
+  height: 25px;
+  width: 25px;
+  margin: 12px 12px 12px 22px;
+}
+#mycod .myCodTabs .tab.share-tab.active:after {
+  bottom: -20px;
+  left: 6px;
+}
+#mycod .myCodTabs .tab.active {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+#mycod .myCodTabs .tab.active:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #666666;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  left: 18px;
+}
+#mycod .myCodTabs .arrow {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -92px -88px;
+  top: 25px;
+  right: 20px;
+  display: block;
+}
+#mycod .panel {
+  display: none;
+  background-color: #1D242C;
+  border: 1px solid #666666;
+  padding-bottom: 60px;
+  position: relative;
+  float: left;
+}
+#mycod .panel#share-panel {
+  padding: 40px 30px 25px;
+  background-color: black;
+  background-image: none;
+  width: 650px;
+  position: relative;
+  left: -312px;
+}
+#mycod .panel#share-panel h1 {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+#mycod .panel#share-panel p {
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  margin-bottom: 25px;
+}
+#mycod .panel#share-panel h3 {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+#mycod .panel#share-panel h3.copy-text {
+  margin: 25px 0 0;
+  text-transform: uppercase;
+}
+#mycod .panel#share-panel h3.clan-title {
+  margin-top: 25px;
+}
+#mycod .panel#share-panel .share-career {
+  margin-bottom: 35px;
+}
+#mycod .panel#share-panel .facebook-link a {
+  color: #6092bc;
+  display: inline-block;
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 0 0 0 45px;
+  padding: 0;
+  text-transform: uppercase;
+}
+#mycod .panel#share-panel .facebook-link a span {
+  width: 25px;
+  height: 25px;
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -95px -110px;
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+}
+#mycod .panel#share-panel .paste-code {
+  background-color: white;
+  border: 1px solid #666666;
+  color: black;
+  height: 60px;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-family: "Courier New", Courier, monospace;
+  cursor: text;
+}
+#mycod .panel#share-panel .checkbox {
+  display: block;
+  width: 11px;
+  height: 10px;
+  padding: 5px 6px;
+  border: 1px solid #787878;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  float: left;
+  margin: 48px 20px 0 0;
+}
+#mycod .panel#share-panel .checkbox:after {
+  background-color: transparent;
+  content: '';
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  left: 4px;
+  bottom: 4px;
+}
+#mycod .panel#share-panel .checkbox.checked {
+  border: 1px solid #6092bc;
+}
+#mycod .panel#share-panel .checkbox.checked:after {
+  background-color: #6092bc;
+}
+#mycod .panel .view-more-link {
+  position: absolute;
+  bottom: 0;
+  width: 368px;
+  background-color: black;
+  padding: 5px 0 5px 30px;
+  font-size: 13px;
+}
+#mycod .panel .view-more-link a {
+  color: #6092bc;
+}
+#mycod .panel .panel-head {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 50px;
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+#mycod .panel .user-info {
+  zoom: 1;
+  margin: 5px 0;
+}
+#mycod .panel .user-info:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#mycod .panel .user-info .patch {
+  display: block;
+  float: left;
+  height: 50px;
+  width: 45px;
+  margin: 0 15px 0 20px;
+}
+#mycod .panel .user-info .username {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: white;
+}
+#mycod .panel .user-info .username .clantag {
+  color: #dcbe0e;
+}
+#mycod .panel .user-info .level {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-top: 10px;
+  float: left;
+  padding-left: 22px;
+}
+#mycod .panel .user-info .level#level-1, #mycod .panel .user-info .level#level-2 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -1px;
+}
+#mycod .panel .user-info .level#level-3, #mycod .panel .user-info .level#level-4 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -19px;
+}
+#mycod .panel .user-info .level#level-5, #mycod .panel .user-info .level#level-6 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -37px;
+}
+#mycod .panel .user-info .level#level-7, #mycod .panel .user-info .level#level-8 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -55px;
+}
+#mycod .panel .user-info .level#level-9, #mycod .panel .user-info .level#level-10 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -73px;
+}
+#mycod .panel .user-info .level#level-11, #mycod .panel .user-info .level#level-12, #mycod .panel .user-info .level#level-13 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -91px;
+}
+#mycod .panel .user-info .level#level-14, #mycod .panel .user-info .level#level-15, #mycod .panel .user-info .level#level-16 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -109px;
+}
+#mycod .panel .user-info .level#level-17, #mycod .panel .user-info .level#level-18, #mycod .panel .user-info .level#level-19 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -127px;
+}
+#mycod .panel .user-info .level#level-20, #mycod .panel .user-info .level#level-21, #mycod .panel .user-info .level#level-22 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -145px;
+}
+#mycod .panel .user-info .level#level-23, #mycod .panel .user-info .level#level-24, #mycod .panel .user-info .level#level-25 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -163px;
+}
+#mycod .panel .user-info .level#level-26, #mycod .panel .user-info .level#level-27, #mycod .panel .user-info .level#level-28 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -181px;
+}
+#mycod .panel .user-info .level#level-29, #mycod .panel .user-info .level#level-30, #mycod .panel .user-info .level#level-31 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -199px;
+}
+#mycod .panel .user-info .level#level-32, #mycod .panel .user-info .level#level-33, #mycod .panel .user-info .level#level-34 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -217px;
+}
+#mycod .panel .user-info .level#level-35, #mycod .panel .user-info .level#level-36, #mycod .panel .user-info .level#level-37 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -235px;
+}
+#mycod .panel .user-info .level#level-38, #mycod .panel .user-info .level#level-39, #mycod .panel .user-info .level#level-40 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -253px;
+}
+#mycod .panel .user-info .level#level-41, #mycod .panel .user-info .level#level-42, #mycod .panel .user-info .level#level-43 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -271px;
+}
+#mycod .panel .user-info .level#level-44, #mycod .panel .user-info .level#level-45, #mycod .panel .user-info .level#level-46 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -289px;
+}
+#mycod .panel .user-info .level#level-47, #mycod .panel .user-info .level#level-48, #mycod .panel .user-info .level#level-49 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -307px;
+}
+#mycod .panel .user-info .level#level-50, #mycod .panel .user-info .level#level-51, #mycod .panel .user-info .level#level-52 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -325px;
+}
+#mycod .panel .user-info .level#level-53, #mycod .panel .user-info .level#level-54, #mycod .panel .user-info .level#level-55 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -343px;
+}
+#mycod .panel .user-info .level#level-56, #mycod .panel .user-info .level#level-57, #mycod .panel .user-info .level#level-58, #mycod .panel .user-info .level#level-59 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -361px;
+}
+#mycod .panel .user-info .level#level-60 {
+  background-image: url("../../img/rank_sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -379px;
+}
+#mycod .panel .clan-info {
+  zoom: 1;
+  margin: 10px 0;
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: white;
+}
+#mycod .panel .clan-info:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#mycod .panel .clan-info .clantag {
+  color: #dcbe0e;
+}
+#mycod .panel .clan-info p {
+  padding: 5px 0;
+}
+#mycod .panel .clan-info .clanemblem {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 0 20px;
+  float: left;
+}
+#mycod .panel .block-stats {
+  zoom: 1;
+  margin: 20px 20px 0;
+}
+#mycod .panel .block-stats:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#mycod .panel .block-stats .bstat {
+  float: left;
+  padding-left: 38px;
+  position: relative;
+  margin-left: 20px;
+  width: 100px;
+}
+#mycod .panel .block-stats .bstat p {
+  text-transform: uppercase;
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+}
+#mycod .panel .block-stats .bstat h3 {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #6092bc;
+  margin-top: 5px;
+}
+#mycod .panel .block-stats .bstat .icon {
+  display: block;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#mycod .panel .block-stats .bstat:first-child {
+  margin: 0;
+}
+#mycod .panel .block-stats .bstat.kdr .icon {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -52px 2px;
+}
+#mycod .panel .block-stats .bstat.winr .icon {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -52px -32px;
+}
+#mycod .panel .block-stats .bstat.hours .icon {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -52px -66px;
+}
+#mycod .panel .block-stats .bstat.members .icon {
+  background-image: url("../../img/widget_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -52px -102px;
+}
+#mycod .panel .list-stats {
+  padding: 20px 20px 0;
+  text-transform: uppercase;
+  color: #cccccc;
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+}
+#mycod .panel .list-stats li {
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#mycod .panel .list-stats li:nth-child(2n) {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+#mycod .panel .list-stats li strong {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  width: 105px;
+}
+#mycod .panel .list-stats li.history-item {
+  zoom: 1;
+}
+#mycod .panel .list-stats li.history-item:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#mycod .panel .list-stats li.history-item .rank_icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
+  margin: 5px 0;
+}
+#mycod .panel .list-stats li.history-item .levels {
+  float: left;
+  margin: 5px 40px 0 25px;
+  width: 100px;
+}
+#mycod .panel .list-stats li.history-item .levels .gametitle {
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+  color: #aaaaaa;
+  padding-bottom: 5px;
+}
+#mycod .panel .list-stats li.history-item .levels .prestige {
+  padding-bottom: 5px;
+}
+#mycod .panel .list-stats li.history-item .levels .rank, #mycod .panel .list-stats li.history-item .levels .prestige {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  color: white;
+}
+#mycod .panel .list-stats li.history-item .playerstats {
+  float: left;
+}
+#mycod .panel .list-stats li.history-item .playerstats .kdr, #mycod .panel .list-stats li.history-item .playerstats .spm, #mycod .panel .list-stats li.history-item .playerstats .winr {
+  font-family: "HelveticaNeue-Med", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+  color: #aaaaaa;
+  padding-top: 5px;
+}
+#mycod .panel .list-stats li.history-item .playerstats .kdr em, #mycod .panel .list-stats li.history-item .playerstats .spm em, #mycod .panel .list-stats li.history-item .playerstats .winr em {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+  color: white;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level {
+  background-image: url("../../img/ops2_ranks.png");
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-1, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-2, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-3 {
+  background-position: 0 0px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-4, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-5, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-6 {
+  background-position: 0 -50px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-7, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-8, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-9 {
+  background-position: 0 -100px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-10, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-11, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-12 {
+  background-position: 0 -150px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-13, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-14, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-15 {
+  background-position: 0 -200px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-16, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-17, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-18 {
+  background-position: 0 -250px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-19, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-20, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-21 {
+  background-position: 0 -300px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-22, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-23, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-24 {
+  background-position: 0 -350px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-25, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-26, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-27 {
+  background-position: 0 -400px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-28, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-29, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-30 {
+  background-position: 0 -450px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-31, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-32, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-33 {
+  background-position: 0 -500px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-34, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-35, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-36 {
+  background-position: 0 -550px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-37, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-38, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-39 {
+  background-position: 0 -600px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-40, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-41, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-42 {
+  background-position: 0 -650px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-43, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-44, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-45 {
+  background-position: 0 -700px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-46, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-47, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-48 {
+  background-position: 0 -750px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-49, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-50, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-51 {
+  background-position: 0 -800px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-52, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-53, #mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-54 {
+  background-position: 0 -850px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.level.level-55 {
+  background-position: 0 -900px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige {
+  background-image: url("../../img/ops2_prestiges.png");
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-1 {
+  background-position: 0 0px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-2 {
+  background-position: 0 -50px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-3 {
+  background-position: 0 -100px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-4 {
+  background-position: 0 -150px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-5 {
+  background-position: 0 -200px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-6 {
+  background-position: 0 -250px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-7 {
+  background-position: 0 -300px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-8 {
+  background-position: 0 -350px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-9 {
+  background-position: 0 -400px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-10 {
+  background-position: 0 -450px;
+}
+#mycod .panel .list-stats li.history-item.ops2 .rank_icon.prestige.prestige-11 {
+  background-position: 0 -500px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level {
+  background-image: url("../../img/mw3_ranks.png");
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-1, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-2, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-3 {
+  background-position: 0 0px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-4, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-5, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-6 {
+  background-position: 0 -50px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-7, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-8, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-9 {
+  background-position: 0 -100px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-10, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-11, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-12 {
+  background-position: 0 -150px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-13, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-14, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-15 {
+  background-position: 0 -200px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-16, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-17, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-18, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-19 {
+  background-position: 0 -250px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-20, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-21, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-22, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-23 {
+  background-position: 0 -300px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-24, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-25, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-26, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-27 {
+  background-position: 0 -350px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-28, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-29, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-30, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-31 {
+  background-position: 0 -400px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-32, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-33, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-34, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-35 {
+  background-position: 0 -450px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-36, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-37, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-38, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-39 {
+  background-position: 0 -500px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-40, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-41, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-42, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-43 {
+  background-position: 0 -550px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-44, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-45, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-46, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-47 {
+  background-position: 0 -600px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-48, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-49, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-50, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-51 {
+  background-position: 0 -650px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-52, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-53, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-54, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-55 {
+  background-position: 0 -700px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-56, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-57, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-58, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-59 {
+  background-position: 0 -750px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-60, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-61, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-62, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-63 {
+  background-position: 0 -800px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-64, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-65, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-66, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-67 {
+  background-position: 0 -850px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-68, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-69, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-70, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-71 {
+  background-position: 0 -900px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-72, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-73, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-74, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-75 {
+  background-position: 0 -950px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-76, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-77, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-78, #mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-79 {
+  background-position: 0 -1000px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.level.level-80 {
+  background-position: 0 -1050px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige {
+  background-image: url("../../img/mw3_prestiges.png");
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-1 {
+  background-position: 0 0px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-2 {
+  background-position: 0 -50px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-3 {
+  background-position: 0 -100px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-4 {
+  background-position: 0 -150px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-5 {
+  background-position: 0 -200px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-6 {
+  background-position: 0 -250px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-7 {
+  background-position: 0 -300px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-8 {
+  background-position: 0 -350px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-9 {
+  background-position: 0 -400px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-10 {
+  background-position: 0 -450px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-11 {
+  background-position: 0 -500px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-12 {
+  background-position: 0 -550px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-13 {
+  background-position: 0 -600px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-14 {
+  background-position: 0 -650px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-15 {
+  background-position: 0 -700px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-16 {
+  background-position: 0 -750px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-17 {
+  background-position: 0 -800px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-18 {
+  background-position: 0 -850px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-19 {
+  background-position: 0 -900px;
+}
+#mycod .panel .list-stats li.history-item.mw3 .rank_icon.prestige.prestige-20 {
+  background-position: 0 -950px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level {
+  background-image: url("../../img/bo_ranks.png");
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-1, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-2, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-3 {
+  background-position: 0 0px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-4, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-5, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-6 {
+  background-position: 0 -50px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-7, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-8, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-9 {
+  background-position: 0 -100px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-10, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-11, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-12 {
+  background-position: 0 -150px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-13, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-14, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-15 {
+  background-position: 0 -200px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-16, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-17, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-18 {
+  background-position: 0 -250px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-19, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-20, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-21 {
+  background-position: 0 -300px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-22, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-23, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-24 {
+  background-position: 0 -350px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-25, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-26, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-27 {
+  background-position: 0 -400px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-28, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-29, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-30 {
+  background-position: 0 -450px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-31, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-32, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-33 {
+  background-position: 0 -500px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-34, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-35, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-36 {
+  background-position: 0 -550px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-37, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-38, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-39 {
+  background-position: 0 -600px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-40, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-41, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-42 {
+  background-position: 0 -650px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-43, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-44, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-45 {
+  background-position: 0 -700px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-46, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-47, #mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-48 {
+  background-position: 0 -750px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-49 {
+  background-position: 0 -800px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.level.level-50 {
+  background-position: 0 -850px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige {
+  background-image: url("../../img/bo_prestiges.png");
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-1 {
+  background-position: 0 0px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-2 {
+  background-position: 0 -50px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-3 {
+  background-position: 0 -100px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-4 {
+  background-position: 0 -150px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-5 {
+  background-position: 0 -200px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-6 {
+  background-position: 0 -250px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-7 {
+  background-position: 0 -300px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-8 {
+  background-position: 0 -350px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-9 {
+  background-position: 0 -400px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-10 {
+  background-position: 0 -450px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-11 {
+  background-position: 0 -500px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-12 {
+  background-position: 0 -550px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-13 {
+  background-position: 0 -600px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-14 {
+  background-position: 0 -650px;
+}
+#mycod .panel .list-stats li.history-item.bo .rank_icon.prestige.prestige-15 {
+  background-position: 0 -700px;
+}
+#mycod .panel.active {
+  display: block;
+}
+#mycod .achievements {
+  padding: 20px 20px 0;
+}
+#mycod .achievements p {
+  font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}

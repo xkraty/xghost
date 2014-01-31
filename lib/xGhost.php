@@ -81,7 +81,14 @@ class xGhost {
           $this->_user = new stdClass;
           $this->_user->username = $account_info->User->accountList->account->username;
           $this->_user->ucdID = $account_info->User->ucdID;
-          $this->_user->cookies = $this->_client->getCookies();
+          $cookies = $this->_client->getCookies();
+          if ( $cookies && count($cookies) ) {
+            foreach ( $cookies as $cookie ) {
+              if ( $cookie->getName() == 'token' ) {
+                $this->_user->session_token = $cookie->getValue();
+              }
+            }
+          }
           $_SESSION['xGhost']['user'] = $this->_user;
           return $this->_user;
         }
@@ -95,18 +102,27 @@ class xGhost {
     unset($_SESSION['xGhost']);
   }
 
-  public function userStats()
+  public function userStats($ucdID = false)
   {
+    $ucdID = $ucdID ? $ucdID : $this->_user->ucdID;
     if ( $this->_client && $this->_user) {
-      $cookies = $this->_client->getCookieJar()->getAllCookies();
       $params = array(
-        'session_token' => $this->_user->session_token
+        'session_token' => $this->_user->session_token,
+        'bh_network' => 'steam',
+        'config_check' => 'false'
       );
+      $this->_client->setMethod('GET');
       $this->_client->setParameterGet($params);
-      $this->_client->setUri($this->_config['url']['user'].$this->_user->ucdID.'/stats');
-      $request = $this->_client->request('GET');
-      $response = $request->getBody();
-      d($response, 1);
+      $this->_client->setUri($this->_config['url']['user'].$ucdID.'/stats');
+      $request = $this->_client->send();
+      if ( $request->isSuccess() ) {
+        $response = json_decode($request->getBody());
+        if ( isset($response->user) ) {
+          return $response->user;
+        }
+          return $response;
+      }
+      return false;
     }
   }
 
