@@ -17,6 +17,7 @@ switch($action)
   case 'login':
     $content = VIEWS . 'login.php';
     if ( isset($_POST) ) {
+      d($_POST, 1);
       if ( $user = $ghost->login($_POST) ) {
         header("location: index.php?s=loggedin");
       }
