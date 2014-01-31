@@ -1,3 +1,3 @@
 <?php
-header("location: /index.php?s=goaway");
+header("location: public/index.php?s=goaway");
 ?>
