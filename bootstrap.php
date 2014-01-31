@@ -33,7 +33,6 @@ define('CONFIGDIR', BASEPATH . 'config' . DIRECTORY_SEPARATOR);
 define('LIBRARIES', BASEPATH . 'lib' . DIRECTORY_SEPARATOR);
 define('VENDOR', BASEPATH . 'vendor' . DIRECTORY_SEPARATOR);
 define('VIEWS', BASEPATH . 'views' . DIRECTORY_SEPARATOR);
-define('WEBPATH', 'http://localhost/xghost/public/');
 
 // Set the include path for libs
 set_include_path(

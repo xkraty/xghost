@@ -6,7 +6,7 @@
           <div class="row">
             <div class="animated bounceIn">
               <div class="form-header">
-                <img src="<?=WEBPATH?>img/small_logo_white.png" alt="Call of Duty Ghosts" class="logo fadeInDown animated">
+                <img src="img/small_logo_white.png" alt="Call of Duty Ghosts" class="logo fadeInDown animated">
               </div>
               <div class="form-main">
                 <form>

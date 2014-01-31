@@ -1,1 +1,3 @@
-header("location: 7index.php?s=goaway");
+<?php
+header("location: /index.php?s=goaway");
+?>
