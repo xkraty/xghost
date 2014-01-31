@@ -52,6 +52,8 @@ class xGhost {
         d($_SESSION);
         return true;
       }
+    } else {
+      die('Config not found => '.$config);
     }
     return false;
   }
