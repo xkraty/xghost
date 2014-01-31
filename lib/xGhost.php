@@ -43,6 +43,8 @@ class xGhost {
         $this->_client->setOptions($this->_config['http_config']);
 
         $this->_user = $this->getSession();
+        d('session');
+        d($_SESSION);
         return true;
       }
     }
@@ -59,12 +61,14 @@ class xGhost {
 
   public function login($credentials = false)
   {
+    d('credentials');
     d($credentials);
     if ( !$credentials || !is_array($credentials) ) {
       if ( isset($this->_config['credentials']) && is_array($this->_config['credentials']) ) {
         $credentials = $this->_config['credentials'];
       }
     }
+    d('here');
 d($this->_client);
     if ( $this->_client && $credentials ) {
       $this->_client->setUri($this->_config['url']['login']);
