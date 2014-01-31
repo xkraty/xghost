@@ -1,2 +1,0 @@
-<?php
-$username = 'Christian';
