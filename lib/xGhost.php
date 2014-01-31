@@ -36,6 +36,8 @@ class xGhost {
   {
     $this->_config_file = $config_file;
     $config = CONFIGDIR.$this->_config_file.'.ini';
+    d('$config');
+    d($config);
     if ( file_exists($config) ) {
       $this->_config = parse_ini_file($config, true);
       if ( $this->_config ) {
