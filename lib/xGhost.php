@@ -141,7 +141,9 @@ class xGhost {
       $request = $this->_client->send();
       if ( $request->isSuccess() ) {
         $response = json_decode($request->getBody());
-        return $response;
+        if ( !isset($response->error) ) {
+          return $response;
+        }
       }
       return false;
     }

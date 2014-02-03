@@ -28,7 +28,13 @@ switch($action)
   break;
   case 'currentwar':
     $war = $ghost->currentWar();
-    $content = VIEWS . 'wars/current.php';
+    $war = json_decode(file_get_contents('clanwar.json'));
+    if ( $war ) {
+      $content = VIEWS . 'wars/current.php';
+    } else {
+      // redirect to global war
+      die('no war, redirected needed here');
+    }
   break;
   default:
     if ( $user = $ghost->getSession() ) {
