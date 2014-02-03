@@ -30,7 +30,7 @@ session_start();
 // Setup global paths
 define('BASEPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 define('CONFIGDIR', BASEPATH . 'config' . DIRECTORY_SEPARATOR);
-define('LANGUAGES', BASEPATH . 'languages' . DIRECTORY_SEPARATOR);
+define('LANGUAGES', BASEPATH . 'i18n' . DIRECTORY_SEPARATOR);
 define('LIBRARIES', BASEPATH . 'lib' . DIRECTORY_SEPARATOR);
 define('VENDOR', BASEPATH . 'vendor' . DIRECTORY_SEPARATOR);
 define('VIEWS', BASEPATH . 'views' . DIRECTORY_SEPARATOR);

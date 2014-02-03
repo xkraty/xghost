@@ -11,6 +11,8 @@ return array(
   'war hc' => 'TDM Veterano',
   'dom' => 'Dominio',
   'dom hc' => 'Dominio',
+  'sd' => 'CED',
+  'sd hc' => 'CED Veterano',
 
   'empty' => ''
 );
