@@ -1,0 +1,154 @@
+body {
+  background-color: #1D242C;
+  background-image: url(../img/bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* =================== LOGIN ====================== */
+.login {
+  height: 475px;
+}
+.login .form-wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 400px;
+  padding-top: 80px;
+}
+.login .form-header {
+  text-align: center;
+}
+.login .form-header .logo {
+  font-size: 50px;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #E7E7E7;
+  padding: 15px 20px;
+  background: #f6f8f9;
+  background: linear-gradient(135deg, #2F3B4B 0%, #29333F 50%, #282F37 51%, #f5f7f9 100%);
+}
+.login .signin {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FF8627;
+  color: #ffffff;
+  transition: background-color 300ms linear;
+}
+.login .signin:hover {
+  background-color: #ff6610;
+}
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+  background-color: #404040;
+  padding-left: 20px;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 10px;
+  color: #cccccc;
+  height: 43px;
+}
+.login .bounceIn {
+  opacity: 0;
+}
+/* =================== BOX ====================== */
+.box .form-header {
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+  background-color: #ffffff;
+}
+.box .form-main {
+  background-color: #505050;
+  padding: 40px 50px;
+}
+.box .form-footer {
+  background-color: #404040;
+  padding: 20px 50px;
+  color: #999999;
+  font-size: 10pt;
+}
+.box .clantag {
+  color: #dcbe0e;
+  font-weight: bold;
+}
+/* =================== STATS ====================== */
+.stats .box .form-header {
+  padding: 25px 0 25px 60px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+.stats .box .level {
+  padding-left: 22px;
+  line-height: 18px;
+}
+/* =================== RANKS ====================== */
+.level {
+  background-image: url("../img/rank_sprite.png");
+  background-repeat: no-repeat;
+}
+.level#level-1, .level#level-2 {
+  background-position: 0 -1px;
+}
+.level#level-3, .level#level-4 {
+  background-position: 0 -19px;
+}
+.level#level-5, .level#level-6 {
+  background-position: 0 -37px;
+}
+.level#level-7, .level#level-8 {
+  background-position: 0 -55px;
+}
+.level#level-9, .level#level-10 {
+  background-position: 0 -73px;
+}
+.level#level-11, .level#level-12, .level#level-13 {
+  background-position: 0 -91px;
+}
+.level#level-14, .level#level-15, .level#level-16 {
+  background-position: 0 -109px;
+}
+.level#level-17, .level#level-18, .level#level-19 {
+  background-position: 0 -127px;
+}
+.level#level-20, .level#level-21, .level#level-22 {
+  background-position: 0 -145px;
+}
+.level#level-23, .level#level-24, .level#level-25 {
+  background-position: 0 -163px;
+}
+.level#level-26, .level#level-27, .level#level-28 {
+  background-position: 0 -181px;
+}
+.level#level-29, .level#level-30, .level#level-31 {
+  background-position: 0 -199px;
+}
+.level#level-32, .level#level-33, .level#level-34 {
+  background-position: 0 -217px;
+}
+.level#level-35, .level#level-36, .level#level-37 {
+  background-position: 0 -235px;
+}
+.level#level-38, .level#level-39, .level#level-40 {
+  background-position: 0 -253px;
+}
+.level#level-41, .level#level-42, .level#level-43 {
+  background-position: 0 -271px;
+}
+.level#level-44, .level#level-45, .level#level-46 {
+  background-position: 0 -289px;
+}
+.level#level-47, .level#level-48, .level#level-49 {
+  background-position: 0 -307px;
+}
+.level#level-50, .level#level-51, .level#level-52 {
+  background-position: 0 -325px;
+}
+.level#level-53, .level#level-54, .level#level-55 {
+  background-position: 0 -343px;
+}
+.level#level-56, .level#level-57, .level#level-58, .level#level-59 {
+  background-position: 0 -361px;
+}
+.level#level-60 {
+  background-position: 0 -379px;
+}
