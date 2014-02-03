@@ -55,5 +55,7 @@
         <h3><?=$stats->clan->winp?></h3>
       </li>
     </ul>
+    <br />
+    <a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>
   </div>
 </div>
