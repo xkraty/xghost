@@ -26,6 +26,10 @@ switch($action)
     $ghost->logout();
     header("location: index.php?s=logggedout");
   break;
+  case 'currentwar':
+    $war = $ghost->currentWar();
+    $content = VIEWS . 'wars/current.php';
+  break;
   default:
     if ( $user = $ghost->getSession() ) {
       $stats = $ghost->userStats();

@@ -3,7 +3,7 @@
   <div class="panel active" id="ghosts-panel">
     <div class="panel-head">Call of Duty: Ghosts - Player Stats</div>
     <div class="user-info">
-      <span class="patch" style="background-image:url(&quot;https://widget.live-ca.callofduty.com/img/patches/6ba7c59a7bfca1dd77d5c45acb5bd690.png&quot;)"></span>
+      <span class="patch" style="background-image:url('<?=PATCHES.md5($stats->squadMember->patch)?>.png')"></span>
       <p class="username">
         <span class="clantag">[<?=$stats->clan->tag?>]</span>  <?=$stats->profile->gamertag?>
       </p>
@@ -17,7 +17,7 @@
       </li>
       <li class="bstat winr">
         <span class="icon"></span>
-        <p>W/S</p><h3><?=round($stats->profile->winr, 2)?></h3>
+        <p>W/L</p><h3><?=round($stats->profile->winr, 2)?></h3>
       </li>
       <li class="bstat hours">
         <span class="icon"></span>
@@ -35,7 +35,7 @@
   <div id="clan-panel" class="panel active">
     <div class="panel-head">Call of Duty: Ghosts - Clan Stats </div>
     <div class="clan-info">
-      <span class="clanemblem" style="background-image:url('https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?size=45&title=ghosts&imgtype=png&background=0&clan_id=<?=$stats->clan->teamId?>')"></span>
+      <span class="clanemblem" style="background-image:url('<?=CLANEMBLEM.$stats->clan->teamId?>')"></span>
       <p><span class="clantag">[<?=$stats->clan->tag?>]</span> <?=$stats->clan->name?></p>
       <h3>Level <?=$stats->clan->clanLevel?></h3>
     </div>

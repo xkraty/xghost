@@ -119,9 +119,29 @@ class xGhost {
       if ( $request->isSuccess() ) {
         $response = json_decode($request->getBody());
         if ( isset($response->user) ) {
+          $_SESSION['xGhost']['user']->clanId = $response->user->clan->teamId;
           return $response->user;
         }
-          return $response;
+        return $response;
+      }
+      return false;
+    }
+  }
+
+  public function currentWar()
+  {
+    if ( $this->_client && $this->_user) {
+      $params = array(
+        'session_token' => $this->_user->session_token,
+        'config_check' => 'false'
+      );
+      $this->_client->setMethod('GET');
+      $this->_client->setParameterGet($params);
+      $this->_client->setUri($this->_config['url']['currentwar'].$this->_user->clanId.'/since/'.time());
+      $request = $this->_client->send();
+      if ( $request->isSuccess() ) {
+        $response = json_decode($request->getBody());
+        return $response;
       }
       return false;
     }

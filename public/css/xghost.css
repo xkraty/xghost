@@ -3,6 +3,7 @@ body {
   background-image: url(../img/bg.png);
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .login {
   height: 475px;

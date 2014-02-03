@@ -30,9 +30,21 @@ session_start();
 // Setup global paths
 define('BASEPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 define('CONFIGDIR', BASEPATH . 'config' . DIRECTORY_SEPARATOR);
+define('LANGUAGES', BASEPATH . 'languages' . DIRECTORY_SEPARATOR);
 define('LIBRARIES', BASEPATH . 'lib' . DIRECTORY_SEPARATOR);
 define('VENDOR', BASEPATH . 'vendor' . DIRECTORY_SEPARATOR);
 define('VIEWS', BASEPATH . 'views' . DIRECTORY_SEPARATOR);
+
+// Patches path
+define('PATCHES', 'https://widget.live-ca.callofduty.com/img/patches/');
+define('CLANEMBLEM', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?size=45&title=ghosts&imgtype=png&background=0&clan_id=');
+define('CLANEMBLEM_SMALL', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?size=30&title=ghosts&imgtype=png&background=0&clan_id=');
+
+// Date format
+define('DATE_FORMAT', 'd/m/Y'); // set it to m/d/Y for US format
+
+// Set timezone check http://php.net/manual/en/timezones.php for supported timezone and
+date_default_timezone_set('Europe/Rome'); // edit for different timezone
 
 // Set the include path for libs
 set_include_path(
@@ -41,7 +53,11 @@ set_include_path(
 );
 
 require_once 'functions.php';
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
+
+// Translations
+$language = 'it_IT';
+$translate = require_once LANGUAGES.$language.'.php';
 
 // Preload xGhost class
 require_once 'xGhost.php';

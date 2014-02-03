@@ -9,4 +9,8 @@ function d($what, $die = 0)
     die("Debug&Die");
   }
 }
+function dateFormat($date)
+{
+  return date(DATE_FORMAT.' H:i:s', strtotime($date));
+}
 ?>
