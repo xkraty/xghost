@@ -37,8 +37,9 @@ define('VIEWS', BASEPATH . 'views' . DIRECTORY_SEPARATOR);
 
 // Patches path
 define('PATCHES', 'https://widget.live-ca.callofduty.com/img/patches/');
-define('CLANEMBLEM', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?size=45&title=ghosts&imgtype=png&background=0&clan_id=');
-define('CLANEMBLEM_SMALL', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?size=30&title=ghosts&imgtype=png&background=0&clan_id=');
+define('BASEEMBLEM', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?title=ghosts&imgtype=png&background=0&size=');
+define('CLANEMBLEM', BASEEMBLEM . '45&clan_id=');
+define('CLANEMBLEM_SMALL', BASEEMBLEM . '30&clan_id=');
 
 // Date format
 define('DATE_FORMAT', 'd/m/Y'); // set it to m/d/Y for US format

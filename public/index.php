@@ -24,7 +24,7 @@ switch($action)
   break;
   case 'logout':
     $ghost->logout();
-    header("location: index.php?s=logggedout");
+    header("location: index.php?s=loggedout");
   break;
   case 'currentwar':
     $war = $ghost->currentWar();
@@ -38,7 +38,10 @@ switch($action)
   break;
   default:
     if ( $user = $ghost->getSession() ) {
-      $stats = $ghost->userStats();
+      // $stats = $ghost->userStats();
+      $stats = json_decode(file_get_contents('stats.json'));
+      $stats = $stats->user;
+      // d($stats);
       $content = VIEWS . 'user/stats.php';
     } else {
       $content = VIEWS . 'login.php';

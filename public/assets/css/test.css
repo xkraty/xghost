@@ -1,0 +1,292 @@
+/*-------------------------------------------------------------
+                    SERVICES STYLES
+---------------------------------------------------------------*/
+
+.services {
+  border:1px solid #e1e1e1;
+  width: 90%;
+  float: right;
+  padding: 25px 12px 15px 45px;
+  position:relative;
+  background:#fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background:#fafafa;
+}
+.services:after {
+  z-index: -1;
+position: absolute;
+content: "";
+bottom: 15px;
+left: 10px;
+width: 50%;
+top: 80%;
+max-width: 300px;
+background: rgba(0, 0, 0, 0.7);
+-webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+-webkit-transform: rotate(-3deg);
+-moz-transform: rotate(-3deg);
+-o-transform: rotate(-3deg);
+-ms-transform: rotate(-3deg);
+transform: rotate(-3deg);
+}
+.services:hover {
+  background:#1b9cff;
+  border-color:#1b9cff;
+  cursor:pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services:hover h3, .services:hover p {
+  color:#fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services:hover .service-ico1 ,
+.services:hover .service-ico2 ,
+.services:hover .service-ico3 {
+  background-color:#484747;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services h3 {
+  font-size: 16px;
+  color:#444444;
+  font-weight: 800;
+  margin-top:0px;
+}
+
+.services p {
+  font-size: 12px;
+  color:#444444;
+  color:#8a8a8a;
+}
+
+.service-ico1, .service-ico2, .service-ico3 {
+  background:#1b9cff url(../images/ico1.png) no-repeat center center;
+  width: 74px;
+  height: 74px;
+  border: 7.5px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: -38px;
+  top: 22%;
+  overflow:hidden;
+}
+
+.service-ico2 {
+  background:#1b9cff url(../images/ico2.png) no-repeat center center;
+}
+
+.service-ico3 {
+  background:#1b9cff url(../images/ico3.png) no-repeat center center;
+}
+
+.services:hover .shadow-right {
+  opacity:1;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services1 {
+  width: 90%;
+  float: right;
+  padding: 25px 12px 0px 45px;
+  position:relative;
+  background:#fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services1:hover {cursor:pointer;}
+
+.services1:hover .service-ico1 ,
+.services1:hover .service-ico2 ,
+.services1:hover .service-ico3 {
+  background-color:#1b9cff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services1 h3 {
+  font-size: 16px;
+  color:#444444;
+  font-weight: 800;
+  margin-top:0px;
+}
+
+.services1 p {
+  font-size: 12px;
+  color:#444444;
+  color:#8a8a8a;
+  margin-bottom:15px;
+  line-height:19px;
+}
+
+.services1 .service-ico1, .services1 .service-ico2, .services1 .service-ico3 {
+  background:#484747 url(../images/ico4.png) no-repeat center center;
+  border:none;
+  width: 60px;
+  height: 60px;
+  display: table;
+  border-radius: 50%;
+  overflow:hidden;
+  float:left;
+  margin-top: -8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services1 .service-ico2 {
+  background:#484747 url(../images/ico5.png) no-repeat center center;
+}
+
+.services1 .service-ico3 {
+  background:#484747 url(../images/ico6.png) no-repeat center center;
+}
+
+.services1 a , .rmore {
+  font-family:Roboto;
+  font-weight:bold;
+  font-size:12px;
+  color:#1b9cff;
+}
+
+.rmore:hover {
+  color:#858585;
+}
+
+.services1 a:hover {
+  color:#b7b7b7;
+}
+
+.services2 {
+  border:1px solid #e1e1e1;
+  width: 100%;
+  float: none;
+  padding: 25px 15px 0px 15px;
+  position:relative;
+  background:#fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services2:hover {cursor:pointer;}
+
+.services2:hover .service-ico1 ,
+.services2:hover .service-ico2 ,
+.services2:hover .service-ico3 {
+  background-color:#1b9cff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services2 h3 {
+  font-size: 16px;
+  color:#444444;
+  font-weight: 800;
+  margin-top:0px;
+  text-align:center;
+}
+
+.services2 p {
+  font-size: 12px;
+  color:#444444;
+  color:#8a8a8a;
+  margin-bottom:15px;
+  text-align:center;
+  line-height:19px;
+}
+
+.services2 .service-ico1, .services2 .service-ico2, .services2 .service-ico3 {
+  position:relative;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  background:#484747 url(../images/ico4.png) no-repeat center center;
+  border:none;
+  width: 60px;
+  height: 60px;
+  display: table;
+  border-radius: 50%;
+  overflow:hidden;
+  float:none;
+  margin: 0 auto 25px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.services2 .service-ico2 {
+  background:#484747 url(../images/ico5.png) no-repeat center center;
+}
+
+.services2 .service-ico3 {
+  background:#484747 url(../images/ico6.png) no-repeat center center;
+}
+
+.services2 a {
+  font-family:Roboto;
+  font-weight:bold;
+  font-size:12px;
+  color:#1b9cff;
+  text-align:center;
+  display: table;
+  margin: 30px auto 22px;
+}
+
+.services2 a:hover {
+  color:#b7b7b7;
+}
+
+.service-info {
+  padding-right: 20px;
+}
+
+.service-info h6 {
+  font-family: Open sans;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  color:#2e2e2e;
+  line-height: 20px;
+  margin: 20px 0 25px;
+}
+
+.service-3 .services1 {
+  margin-bottom:20px;
+}
+
+.service-info p {
+  color:#8a8a8a;
+  font-size:12px;
+  line-height:19px;
+}
