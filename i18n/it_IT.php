@@ -25,6 +25,8 @@ return array(
   'win' => 'Vinte',
   'winr' => 'Rateo',
   'wins' => 'Serie Vittorie',
+  'members' => 'Membri',
+  'winp' => 'Vittorie',
 
   'empty' => ''
 );
