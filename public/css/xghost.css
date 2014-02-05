@@ -43,6 +43,61 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: #dcbe0e;
   font-weight: bold; }
 
+/* =================== ICONS ====================== */
+.icon {
+  background-image: url(../img/icons.png);
+  background-position: left center;
+  background-repeat: no-repeat; }
+  span .icon {
+    height: 50px;
+    width: 50px;
+    float: left; }
+
+.icon-kills {
+  background-position: 0 -0px; }
+
+.icon-deaths {
+  background-position: 0 -50px; }
+
+.icon-kdr {
+  background-position: 0 -100px; }
+
+.icon-played {
+  background-position: 0 -150px; }
+
+.icon-win {
+  background-position: 0 -200px; }
+
+.icon-winr {
+  background-position: 0 -250px; }
+
+.icon-wins {
+  background-position: 0 -300px; }
+
+.icon-time {
+  background-position: 0 -350px; }
+
+.icon-members {
+  background-position: 0 -400px; }
+
+.icon-general {
+  background-position: 0 -450px; }
+
+.icon-colonel {
+  background-position: 0 -500px; }
+
+.icon-private {
+  background-position: 0 -550px; }
+
+.icon-steam {
+  background-position: 0 -600px; }
+
+.icon-psn {
+  background-position: 0 -650px; }
+
+.icon-xbox {
+  background-position: 0 -700px; }
+
 /* =================== LOGIN ====================== */
 .login-view .box {
   margin-top: 80px; }
@@ -75,11 +130,49 @@ input[type="text"], input[type="email"], input[type="password"] {
     text-shadow: 0px 2px 3px #555555;
     font-size: 22px; }
   .stats-view .box .box-main {
-    padding: 40px 20px; }
+    padding: 20px; }
+    .stats-view .box .box-main ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .stats-view .box .box-main ul.list-icon li {
+        position: relative;
+        padding-left: 60px;
+        margin: 8px 0; }
+        .stats-view .box .box-main ul.list-icon li:after {
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          content: "";
+          width: 50%;
+          height: 0;
+          border: 0;
+          margin-left: -25%; }
+        .stats-view .box .box-main ul.list-icon li:nth-child(3n+1) {
+          margin-bottom: 15px; }
+          .stats-view .box .box-main ul.list-icon li:nth-child(3n+1):after {
+            border-bottom: 1px solid white; }
+        .stats-view .box .box-main ul.list-icon li.icon {
+          height: 50px; }
+        .stats-view .box .box-main ul.list-icon li.title {
+          color: #3791c8;
+          font-size: 32px;
+          text-shadow: 0px 2px 3px #333333; }
+        .stats-view .box .box-main ul.list-icon li .xlabel {
+          display: block;
+          font-size: 12px;
+          color: #3791c8;
+          text-shadow: 0px 2px 3px #333333; }
+        .stats-view .box .box-main ul.list-icon li .xvalue {
+          display: block;
+          font-size: 24px;
+          font-weight: bold;
+          text-shadow: 0px 2px 3px #333333; }
   .stats-view .box .box-footer {
     padding: 20px 125px;
     overflow: auto;
-    position: relative; }
+    position: relative;
+    height: 85px; }
     .stats-view .box .box-footer .wrap-level {
       position: absolute;
       top: 20px;
@@ -97,6 +190,11 @@ input[type="text"], input[type="email"], input[type="password"] {
       margin: 0 0 0 5px; }
     .stats-view .box .box-footer .progress {
       margin: 12px; }
+.stats-view #clan.box .box-main ul li.title {
+  text-align: center;
+  padding: 0; }
+.stats-view #clan.box .box-main ul li:after {
+  border-bottom: 1px solid white; }
 
 /* =================== RANKS ====================== */
 .level {

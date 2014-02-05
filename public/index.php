@@ -38,10 +38,10 @@ switch($action)
   break;
   default:
     if ( $user = $ghost->getSession() ) {
-      // $stats = $ghost->userStats();
-      $stats = json_decode(file_get_contents('stats.json'));
-      $stats = $stats->user;
-      // d($stats);
+      $stats = $ghost->userStats();
+      // $stats = json_decode(file_get_contents('stats.json'));
+      // $stats = $stats->user;
+      // d($stats, 1);
       $content = VIEWS . 'user/stats.php';
     } else {
       $content = VIEWS . 'login.php';

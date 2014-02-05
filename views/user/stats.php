@@ -1,36 +1,58 @@
 <div class="stats-view">
   <!-- Player Stats -->
-  <div class="col-md-6 animated bounceInLeft box">
+  <div class="col-md-6 animated bounceInLeft box" id="player">
     <div class="box-header" style="background-image:url('<?=PATCHES.md5($stats->squadMember->patch)?>.png')">
       <span class="clantag">[<?=$stats->clan->tag?>]</span>  <?=$stats->profile->gamertag?>
     </div>
     <div class="box-main">
-      <ul class="block-stats">
-        <li class="bstat kdr">
-          <span class="icon"></span>
-          <p>K/D</p>
-          <h3><?=round($stats->profile->kdr, 2)?></h3>
-        </li>
-        <li class="bstat winr">
-          <span class="icon"></span>
-          <p>W/L</p><h3><?=round($stats->profile->winr, 2)?></h3>
-        </li>
-        <li class="bstat hours">
-          <span class="icon"></span>
-          <p>Hours</p>
-          <h3><?=round($stats->profile->hoursPlayed, 2)?></h3>
-        </li>
-      </ul>
+      <div class="clearfix">
+        <ul class="list-icon col-md-6">
+          <li class="title"><?=translate('report')?></li>
+          <li class="icon icon-kills">
+            <span class="xlabel"><?=translate('kills')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->kill)?></span>
+          </li>
+          <li class="icon icon-deaths">
+            <span class="xlabel"><?=translate('deaths')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->deaths)?></span>
+          </li>
+          <li class="icon icon-kdr">
+            <span class="xlabel"><?=translate('kdr')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->kdr, 2)?></span>
+          </li>
+          <li class="icon icon-time">
+            <span class="xlabel"><?=translate('time')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->hoursPlayed, 2)?></span>
+          </li>
+        </ul>
 
-      <ul class="list-stats">
-        <li>Favourite weapon <strong><?=$stats->profile->preferredWeapon?></strong></li>
-        <li>Win streak <strong><?=$stats->profile->currentStreak?></strong></li>
-      </ul>
+        <ul class="list-icon col-md-6">
+          <li class="title"><?=translate('games')?></li>
+          <li class="icon icon-played">
+            <span class="xlabel"><?=translate('played')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->wins + $stats->profile->losses)?></span>
+          </li>
+          <li class="icon icon-win">
+            <span class="xlabel"><?=translate('win')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->wins)?></span>
+          </li>
+          <li class="icon icon-winr">
+            <span class="xlabel"><?=translate('winr')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->winr, 2)?></span>
+          </li>
+          <li class="icon icon-wins">
+            <span class="xlabel"><?=translate('wins')?></span>
+            <span class="xvalue"><?=numbers($stats->profile->currentStreak)?></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <li>Favourite weapon <strong><?=$stats->profile->preferredWeapon?></strong></li>-->
     </div>
     <div class="box-footer">
       <div class="wrap-level current">
         <div class="current-level"><?=$stats->squadMember->level?></div>
-        <?php if ( $stats->squadMember->prestige > 1 || ( $stats->squadMember->prestige == 1 && $stats->squadMember->level == 60 ) ): ?>
+        <?php if ( $stats->squadMember->prestige > 1 ): ?>
           <span class="prestige prestige-<?=$stats->squadMember->prestige - ( $stats->squadMember->prestige == 10 && $stats->squadMember->level == 60 ? 0 : 1)?>"></span>
         <?php else: ?>
           <span class="level level-<?=$stats->squadMember->level?>"></span>
@@ -39,51 +61,48 @@
         $progress = round($stats->squadMember->progress * 100);
         ?>
       </div>
-      <div class="progress">
-        <div class="progress-bar" style="width: <?=$progress?>%;"></div>
-      </div>
-      <div class="wrap-level next">
-        <!-- to fix prestige checks -->
-        <?php if ( $stats->squadMember->prestige > 1 || ( $stats->squadMember->prestige == 1 && $stats->squadMember->level == 60 ) ): ?>
-          <span class="prestige prestige-<?=$stats->squadMember->prestige - ( $stats->squadMember->prestige == 10 && $stats->squadMember->level == 60 ? 0 : 1)?>"></span>
-        <?php else: ?>
-          <span class="level level-<?=$stats->squadMember->level?>"></span>
-        <?php endif; ?>
-        <div class="next-level"><?=$stats->squadMember->nextLevel?></div>
-      </div>
+      <?php if ( !($stats->squadMember->prestige == 10 && $stats->squadMember->level == 60) ): ?>
+        <div class="progress">
+          <div class="progress-bar" style="width: <?=$progress?>%;"></div>
+        </div>
+        <div class="wrap-level next">
+          <?php if ( $stats->squadMember->prestige > 1 || ( $stats->squadMember->prestige == 1 && $stats->squadMember->level == 60 ) ): ?>
+            <span class="prestige prestige-<?=$stats->squadMember->prestige - ( $stats->squadMember->level == 60 ? 0 : 1)?>"></span>
+          <?php else: ?>
+            <span class="level level-<?=$stats->squadMember->level?>"></span>
+          <?php endif; ?>
+          <div class="next-level"><?=$stats->squadMember->nextLevel?></div>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 
   <!-- Player Stats //-->
   <!-- Clan Stats -->
-  <div class="col-md-6 animated bounceInRight box">
+  <div class="col-md-6 animated bounceInRight box" id="clan">
     <div class="box-header" style="background-image:url('<?=CLANEMBLEM.$stats->clan->teamId?>')">
       <span class="clantag">[<?=$stats->clan->tag?>]</span> <?=$stats->clan->name?>
     </div>
     <div class="box-main">
-      <div class="clan-info">
-        <span class="clanemblem" style="background-image:url('<?=CLANEMBLEM.$stats->clan->teamId?>')"></span>
-        <p></p>
-        <h3>Level <?=$stats->clan->clanLevel?></h3>
+      <div class="clearfix">
+        <ul class="list-icon col-md-12">
+          <li class="title"><?=$stats->clan->motto?></li>
+          <li class="icon icon-members col-md-4">
+            <span class="xlabel"><?=translate('members')?></span>
+            <span class="xvalue"><?=numbers($stats->clan->memberCount)?></span>
+          </li>
+          <li class="icon icon-kdr col-md-4">
+            <span class="xlabel"><?=translate('kdr')?></span>
+            <span class="xvalue"><?=numbers($stats->clan->kdr, 2)?></span>
+          </li>
+          <li class="icon icon-winr col-md-4">
+            <span class="xlabel"><?=translate('winp')?></span>
+            <span class="xvalue"><?=numbers($stats->clan->winp)?>%</span>
+          </li>
+        </ul>
       </div>
-      <ul class="block-stats">
-        <li class="bstat members">
-          <span class="icon"></span>
-          <p>Members</p><h3><?=$stats->clan->memberCount?></h3>
-        </li>
-        <li class="bstat kdr">
-          <span class="icon"></span>
-          <p>K/D</p>
-          <h3><?=$stats->clan->kdr?></h3>
-        </li>
-        <li class="bstat winr">
-          <span class="icon"></span>
-          <p>W/L</p>
-          <h3><?=$stats->clan->winp?></h3>
-        </li>
-      </ul>
       <br />
-      <a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>
+        <a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>
     </div>
     <div class="box-footer">
       <div class="wrap-level current">
@@ -104,6 +123,7 @@
 </div>
 
 
+<!--
 <div class="clearfix">
   <div class="services">
     <div class="shadow-right"></div>
@@ -112,5 +132,4 @@
     <p>Lorem ipsum dolor slo onsec  designs tueraliquet Morbi nec In Curabitur nel dolor slo onsec designs</p>
   </div>
 </div>
-
-
+-->

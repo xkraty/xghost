@@ -5,7 +5,7 @@ $font: Roboto
 $img: "../img/"
 $mainc: "#3791c8"
 $subc: "#7ac6f4"
-
+$icons: "kills", "deaths", "kdr", "played", "win", "winr", "wins", "time", "members", "general", "colonel", "private", "steam", "psn", "xbox"
 /* =================== BODY ====================== */
 body
   background-color: #000
@@ -47,6 +47,20 @@ input[type="text"], input[type="email"], input[type="password"]
   color: #dcbe0e
   font-weight: bold
 
+/* =================== ICONS ====================== */
+.icon
+  background-image: url(#{$img}icons.png)
+  background-position: left center
+  background-repeat: no-repeat
+  span &
+    height: 50px
+    width: 50px
+    float: left
+$i: 0
+@each $icon in $icons
+  .icon-#{$icon}
+    background-position: 0 -#{$i*50}px
+  $i: $i + 1
 /* =================== LOGIN ====================== */
 .login-view
   .box
@@ -82,11 +96,50 @@ input[type="text"], input[type="email"], input[type="password"]
       text-shadow: 0px 2px 3px #555
       font-size: 22px
     .box-main
-      padding: 40px 20px
+      padding: 20px
+      ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        &.list-icon
+          li
+            position: relative
+            padding-left: 60px
+            margin: 8px 0
+            &:after
+              position: absolute
+              bottom: -5px
+              left: 50%
+              content: ''
+              width: 50%
+              height: 0
+              border: 0
+              margin-left: -25%
+            &:nth-child(3n+1)
+              margin-bottom: 15px
+              &:after
+                border-bottom: 1px solid #fff
+            &.icon
+              height: 50px
+            &.title
+              color: #{$mainc}
+              font-size: 32px
+              text-shadow: 0px 2px 3px #333
+            .xlabel
+              display: block
+              font-size: 12px
+              color: #{$mainc}
+              text-shadow: 0px 2px 3px #333
+            .xvalue
+              display: block
+              font-size: 24px
+              font-weight: bold
+              text-shadow: 0px 2px 3px #333
     .box-footer
       padding: 20px 125px
       overflow: auto
       position: relative
+      height: 85px
       .wrap-level
         position: absolute
         top: 20px
@@ -104,7 +157,16 @@ input[type="text"], input[type="email"], input[type="password"]
         margin: 0 0 0 5px
       .progress
         margin: 12px
-
+  #clan
+    &.box
+      .box-main
+        ul
+          li
+            &.title
+              text-align: center
+              padding: 0
+            &:after
+              border-bottom: 1px solid #fff
 /* =================== RANKS ====================== */
 .level
   background-image: url(#{$img}ranks.png)

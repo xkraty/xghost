@@ -14,5 +14,17 @@ return array(
   'sd' => 'CED',
   'sd hc' => 'CED Veterano',
 
+  // Stats view
+  'report' => 'Rapporto',
+  'kills' => 'Uccisioni',
+  'deaths' => 'Morti',
+  'kdr' => 'Rateo',
+  'time' => 'Ore di Gioco',
+  'games' => 'Partite',
+  'played' => 'Giocate',
+  'win' => 'Vinte',
+  'winr' => 'Rateo',
+  'wins' => 'Serie Vittorie',
+
   'empty' => ''
 );

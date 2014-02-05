@@ -52,13 +52,13 @@ set_include_path(
   LIBRARIES
   . PATH_SEPARATOR . VENDOR
 );
-
-require_once 'functions.php';
+// Autoload
 require_once 'vendor/autoload.php';
-
 // Translations
 $language = 'it_IT';
-$translate = require_once LANGUAGES.$language.'.php';
+$_SESSION['xGhost']['translate'] = require_once LANGUAGES.$language.'.php';
+// Misc
+require_once 'functions.php';
 
 // Preload xGhost class
 require_once 'xGhost.php';
