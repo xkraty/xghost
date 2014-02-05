@@ -101,8 +101,7 @@
           </li>
         </ul>
       </div>
-      <br />
-        <a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>
+      <!--<a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>-->
     </div>
     <div class="box-footer">
       <div class="wrap-level current">

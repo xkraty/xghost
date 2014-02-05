@@ -28,7 +28,7 @@ switch($action)
   break;
   case 'currentwar':
     $war = $ghost->currentWar();
-    $war = json_decode(file_get_contents('clanwar.json'));
+    // $war = json_decode(file_get_contents('json/clanwar.json'));
     if ( $war ) {
       $content = VIEWS . 'wars/current.php';
     } else {
@@ -39,7 +39,7 @@ switch($action)
   default:
     if ( $user = $ghost->getSession() ) {
       $stats = $ghost->userStats();
-      // $stats = json_decode(file_get_contents('stats.json'));
+      // $stats = json_decode(file_get_contents('json/stats.json'));
       // $stats = $stats->user;
       // d($stats, 1);
       $content = VIEWS . 'user/stats.php';
