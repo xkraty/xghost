@@ -1,6 +1,4 @@
 .DS_Store
 composer.lock
-sass/.sass_cache
-public/css/.sass_cache
 public/json/
-
+.sass_cache/
