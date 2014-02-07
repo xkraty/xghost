@@ -18,13 +18,28 @@ switch($action)
     $content = VIEWS . 'login.php';
     if ( isset($_POST) ) {
       if ( $user = $ghost->login($_POST) ) {
-        header("location: index.php?s=loggedin");
+        header("location: index.php?a=stats&s=loggedin");
       }
     }
   break;
   case 'logout':
     $ghost->logout();
     header("location: index.php?s=loggedout");
+  break;
+  case 'stats':
+    $id = isset($_GET['id']) ? $_GET['id'] : false;
+    $stats = $ghost->userStats($id);
+    // d($stats, 1);
+    $content = VIEWS . 'user/stats.php';
+  break;
+  case 'clan':
+    $clanId = isset($_GET['clanId']) ? $_GET['clanId'] : false;
+    if ( $clanId ) {
+      $clan = $ghost->clanDetail($clanId);
+      $content = VIEWS . 'clan/detail.php';
+    } else {
+      header("location: index.php?a=404");
+    }
   break;
   case 'currentwar':
     $war = $ghost->currentWar();
@@ -38,11 +53,7 @@ switch($action)
   break;
   default:
     if ( $user = $ghost->getSession() ) {
-      $stats = $ghost->userStats();
-      // $stats = json_decode(file_get_contents('json/stats.json'));
-      // $stats = $stats->user;
-      // d($stats, 1);
-      $content = VIEWS . 'user/stats.php';
+        header("location: index.php?a=stats&s=redir");
     } else {
       $content = VIEWS . 'login.php';
     }

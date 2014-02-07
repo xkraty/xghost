@@ -119,13 +119,61 @@ class xGhost {
       if ( $request->isSuccess() ) {
         $response = json_decode($request->getBody());
         if ( isset($response->user) ) {
-          $_SESSION['xGhost']['user']->clanId = $response->user->clan->teamId;
           return $response->user;
         }
         return $response;
       }
       return false;
     }
+  }
+
+  public function clanDetail($clanId = false)
+  {
+
+    if ( $this->_client && $this->_user && $clanId ) {
+      $params = array(
+        'session_token' => $this->_user->session_token,
+        'config_check' => 'false'
+      );
+      $this->_client->setMethod('GET');
+      $this->_client->setParameterGet($params);
+      $this->_client->setUri($this->_config['url']['clans'].$clanId);
+      $request = $this->_client->send();
+      if ( $request->isSuccess() ) {
+        $response = json_decode($request->getBody());
+        if ( isset($response->team) ) {
+          $response->team->members = $this->clanMembers($clanId);
+          return $response->team;
+        }
+      }
+    }
+    return false;
+  }
+
+  public function clanMembers($clanId = false)
+  {
+    if ( $this->_client && $this->_user && $clanId ) {
+      $params = array(
+        'session_token' => $this->_user->session_token,
+        'config_check' => 'false'
+      );
+      $this->_client->setMethod('GET');
+      $this->_client->setParameterGet($params);
+      $this->_client->setUri($this->_config['url']['clans'].$clanId.'/members');
+      $request = $this->_client->send();
+      if ( $request->isSuccess() ) {
+        $response = json_decode($request->getBody());
+        if ( isset($response->teamMembers) ) {
+          $members = (array) $response->teamMembers;
+          foreach ( $members as $member ) {
+            $sorter[] = $member->membershipType;
+          }
+          array_multisort($sorter, SORT_DESC, $members);
+          return $members;
+        }
+      }
+    }
+    return false;
   }
 
   public function currentWar()

@@ -21,4 +21,18 @@ function numbers($number, $decimals = 0)
 {
   return number_format($number, $decimals, ',', '.');
 }
+function membershipType($id)
+{
+  switch($id)
+  {
+    case 2:
+      return 'general';
+    break;
+    case 1:
+      return 'colonel';
+    break;
+    default:
+      return 'private';
+  }
+}
 ?>

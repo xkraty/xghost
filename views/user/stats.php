@@ -102,6 +102,7 @@
         </ul>
       </div>
       <!--<a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>-->
+      <a href="index.php?a=clan&clanId=<?=$stats->clan->teamId?>" class="btn btn-primary">Details</a>
     </div>
     <div class="box-footer">
       <div class="wrap-level current">
