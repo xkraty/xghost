@@ -29,11 +29,12 @@
 session_start();
 // Setup global paths
 define('BASEPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
-define('CONFIGDIR', BASEPATH . 'config' . DIRECTORY_SEPARATOR);
-define('LANGUAGES', BASEPATH . 'i18n' . DIRECTORY_SEPARATOR);
+define('APP', BASEPATH . 'app' . DIRECTORY_SEPARATOR);
+define('CONFIGDIR', APP . 'config' . DIRECTORY_SEPARATOR);
+define('LANGUAGES', APP . 'i18n' . DIRECTORY_SEPARATOR);
 define('LIBRARIES', BASEPATH . 'lib' . DIRECTORY_SEPARATOR);
 define('VENDOR', BASEPATH . 'vendor' . DIRECTORY_SEPARATOR);
-define('VIEWS', BASEPATH . 'views' . DIRECTORY_SEPARATOR);
+define('VIEWS', APP . 'views' . DIRECTORY_SEPARATOR);
 
 // Patches path
 define('PATCHES', 'https://widget.live-ca.callofduty.com/img/patches/');

@@ -18,7 +18,7 @@
           </li>
           <li class="icon icon-kdr">
             <span class="xlabel"><?=translate('kdr')?></span>
-            <span class="xvalue"><?=numbers($stats->profile->kdr, 2)?></span>
+            <span class="xvalue"><?=numbers($stats->profile->kdr, 3)?></span>
           </li>
           <li class="icon icon-time">
             <span class="xlabel"><?=translate('time')?></span>
@@ -38,7 +38,7 @@
           </li>
           <li class="icon icon-winr">
             <span class="xlabel"><?=translate('winr')?></span>
-            <span class="xvalue"><?=numbers($stats->profile->winr, 2)?></span>
+            <span class="xvalue"><?=numbers($stats->profile->winr, 3)?></span>
           </li>
           <li class="icon icon-wins">
             <span class="xlabel"><?=translate('wins')?></span>

@@ -1,6 +1,5 @@
 {
   "require": {
-    "zendframework/zend-loader": "2.0.*",
     "zendframework/zend-http": "2.0.*"
   }
 }
