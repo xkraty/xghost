@@ -23,6 +23,7 @@
     - retrieve user account info
 
  ******************************************************************************************* */
+namespace xKraty;
 use Zend\Http\Client;
 
 class xGhost {
@@ -109,7 +110,7 @@ class xGhost {
     if ( $this->_client && $this->_user) {
       $params = array(
         'session_token' => $this->_user->session_token,
-        'bh_network' => 'steam',
+        'bh_network' => 'steam', //steam, psn, xbl
         'config_check' => 'false'
       );
       $this->_client->setMethod('GET');

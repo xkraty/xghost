@@ -62,5 +62,5 @@ $_SESSION['xGhost']['translate'] = require_once LANGUAGES.$language.'.php';
 require_once 'functions.php';
 
 // Preload xGhost class
-require_once 'xGhost.php';
+require_once 'xKraty/xGhost.php';
 ?>

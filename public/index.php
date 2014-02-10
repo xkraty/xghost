@@ -9,7 +9,7 @@ $action = isset($_GET['a']) ? $_GET['a'] : 'index';
 $layout = true;
 
 // Istancing the ghost class for API support
-$ghost = new xGhost();
+$ghost = new xKraty\xGhost();
 $user = $ghost->getSession();
 
 switch($action)
