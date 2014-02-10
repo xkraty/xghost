@@ -80,7 +80,7 @@ class xGhost {
         // Checking if login is valid
         if ( preg_match("/send\(\"loginComplete\",'(.*)'\)/i", $response, $match) ) {
           $account_info = json_decode($match[1]);
-          $this->_user = new stdClass;
+          // $this->_user = new stdClass();
           $this->_user->username = $account_info->User->accountList->account->username;
           $this->_user->ucdID = $account_info->User->ucdID;
           $cookies = $this->_client->getCookies();
