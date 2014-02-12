@@ -80,7 +80,7 @@ class xGhost {
         // Checking if login is valid
         if ( preg_match("/send\(\"loginComplete\",'(.*)'\)/i", $response, $match) ) {
           $account_info = json_decode($match[1]);
-          // $this->_user = new stdClass();
+          $this->_user = new \stdClass();
           $this->_user->username = $account_info->User->accountList->account->username;
           $this->_user->ucdID = $account_info->User->ucdID;
           $cookies = $this->_client->getCookies();
@@ -120,7 +120,8 @@ class xGhost {
       if ( $request->isSuccess() ) {
         $response = json_decode($request->getBody());
         if ( isset($response->user) ) {
-          return $response->user;
+          $_SESSION['xGhost']['user']->clanId = $response->user->clan->teamId;
+          return $this->_improveStats($response->user);
         }
         return $response;
       }
@@ -196,6 +197,34 @@ class xGhost {
       }
       return false;
     }
+  }
+
+  /* prestige params seems bugged
+    - prestige 10 is the only one always right
+    - from prestige 0 to 9 it looks like, for unknown reason, it has a +1 so a if you have no prestige the API return prestige 1
+    and if you are prestige 5 it return 6
+    - exepction: for example right now i am prestige 9 and the API returns 9 for me, 3 mates or mine are 8 prestige
+      two of them got 9 ( so +1 ) and one got 8 ( the right number!? )
+  */
+  protected function _improveStats($player)
+  {
+    if ( $player->squadMember->prestige > 1 && $player->squadMember->prestige < 9 ) {
+      $player->squadMember->prestige = $player->squadMember->prestige - 1;
+    }
+    if ( $player->squadMember->level == 60 ) {
+      $nextPrestige = $player->squadMember->prestige + 1;
+      $player->squadMember->nextLevel = 1;
+    } else {
+      $nextPrestige = $player->squadMember->prestige;
+    }
+    $player->custom = new \stdClass();
+    $player->custom->nextPrestige = $nextPrestige;
+    $player->custom->player_progress = round($player->squadMember->progress * 100);
+    $player->custom->clan_progress = round($player->clan->progress * 100);
+    $player->custom->games = $player->profile->wins + $player->profile->losses;
+    $player->custom->kill_per_game = numbers($player->profile->kill / $player->custom->games, 2);
+    $player->custom->deaths_per_game = numbers($player->profile->deaths / $player->custom->games, 2);
+    return $player;
   }
 
 }

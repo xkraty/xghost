@@ -11,13 +11,16 @@ $layout = true;
 // Istancing the ghost class for API support
 $ghost = new xKraty\xGhost();
 $user = $ghost->getSession();
+if ( !$user && $action != 'login' ) {
+  header("location: index.php?a=login");
+}
 
 switch($action)
 {
   case 'login':
     $content = VIEWS . 'login.php';
     if ( isset($_POST) ) {
-      if ( $user = $ghost->login($_POST) ) {
+      if ( $ghost->login($_POST) ) {
         header("location: index.php?a=stats&s=loggedin");
       }
     }
@@ -52,12 +55,7 @@ switch($action)
     }
   break;
   default:
-    if ( $user = $ghost->getSession() ) {
-        header("location: index.php?a=stats&s=redir");
-    } else {
-      $content = VIEWS . 'login.php';
-    }
-
+    header("location: index.php?a=stats&s=redir");
 }
 
 // Include header

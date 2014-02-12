@@ -1,4 +1,34 @@
   </div>
+  <?php if ( $user ): ?>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only"><?=translate('menu')?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><?=TITLE?></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li><a href="index.php?a=stats"><?=translate('home')?></a></li>
+            <?php if ( isset($_SESSION['xGhost']['user']->clanId) ): ?>
+              <li><a href="index.php?a=clan&clanId=<?=$_SESSION['xGhost']['user']->clanId?>"><?=translate('myclan')?></a></li>
+            <?php endif; ?>
+            <li><a href="index.php?a=currentwar"><?=translate('currentwar')?></a></li>
+            <li><a href="index.php?a=logout"><?=translate('logout')?></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Navbar //-->
+  <?php endif; ?>
+
 <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/prefixfree.min.js"></script>

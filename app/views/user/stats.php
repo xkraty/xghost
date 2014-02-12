@@ -46,28 +46,24 @@
           </li>
         </ul>
       </div>
-
-      <!-- <li>Favourite weapon <strong><?=$stats->profile->preferredWeapon?></strong></li>-->
+      <span><?=translate('preferred_weapon')?> <strong><?=weapon($stats->profile->preferredWeapon)?></strong></span>
     </div>
     <div class="box-footer">
       <div class="wrap-level current">
         <div class="current-level"><?=$stats->squadMember->level?></div>
-        <?php if ( $stats->squadMember->prestige > 1 ): ?>
-          <span class="prestige prestige-<?=$stats->squadMember->prestige - ( $stats->squadMember->prestige == 10 && $stats->squadMember->level == 60 ? 0 : 1)?>"></span>
+        <?php if ( $stats->squadMember->prestige > 0 ): ?>
+          <span class="prestige prestige-<?=$stats->squadMember->prestige?>"></span>
         <?php else: ?>
           <span class="level level-<?=$stats->squadMember->level?>"></span>
         <?php endif; ?>
-        <?php
-        $progress = round($stats->squadMember->progress * 100);
-        ?>
       </div>
-      <?php if ( !($stats->squadMember->prestige == 10 && $stats->squadMember->level == 60) ): ?>
+      <?php if ( $stats->squadMember->prestige < 10 ): ?>
         <div class="progress">
-          <div class="progress-bar" style="width: <?=$progress?>%;"></div>
+          <div class="progress-bar" style="width: <?=$stats->custom->player_progress?>%;"></div>
         </div>
         <div class="wrap-level next">
-          <?php if ( $stats->squadMember->prestige > 1 || ( $stats->squadMember->prestige == 1 && $stats->squadMember->level == 60 ) ): ?>
-            <span class="prestige prestige-<?=$stats->squadMember->prestige - ( $stats->squadMember->level == 60 ? 0 : 1)?>"></span>
+          <?php if ( $stats->custom->nextPrestige > 0 ): ?>
+            <span class="prestige prestige-<?=$stats->custom->nextPrestige?>"></span>
           <?php else: ?>
             <span class="level level-<?=$stats->squadMember->level?>"></span>
           <?php endif; ?>
@@ -102,17 +98,14 @@
         </ul>
       </div>
       <!--<a href="index.php?a=currentwar" class="btn btn-primary">Vai alla Clan War</a>-->
-      <a href="index.php?a=clan&clanId=<?=$stats->clan->teamId?>" class="btn btn-primary">Details</a>
+      <a href="index.php?a=clan&clanId=<?=$stats->clan->teamId?>" class="btn btn-primary"><?=translate('clan_details')?></a>
     </div>
     <div class="box-footer">
       <div class="wrap-level current">
         <div class="current-level"><?=$stats->clan->clanLevel?></div>
-        <?php
-        $progress = round($stats->clan->progress * 100);
-        ?>
       </div>
       <div class="progress">
-        <div class="progress-bar" style="width: <?=$progress?>%;"></div>
+        <div class="progress-bar" style="width: <?=$stats->custom->clan_progress?>%;"></div>
       </div>
       <div class="wrap-level next">
         <div class="next-level"><?=$stats->clan->nextLevel?></div>

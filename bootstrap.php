@@ -28,6 +28,7 @@
 
 session_start();
 // Setup global paths
+define('TITLE', 'CoD xGhosts');
 define('BASEPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 define('APP', BASEPATH . 'app' . DIRECTORY_SEPARATOR);
 define('CONFIGDIR', APP . 'config' . DIRECTORY_SEPARATOR);

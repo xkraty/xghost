@@ -1,13 +1,7 @@
-.clandetail-view
+/* =================== clan ====================== */
+.detail-view
   .box
-    .member
-      padding: 5px 0
-      border-width: 2px
-      border-style: solid
-      border-color: #fff
-      border-left-width: 0
-      border-right-width: 0
-    margin-top: 80px
+    margin-top: 30px
     .box-header
       padding-left: 60px
       background-repeat: no-repeat
@@ -16,11 +10,22 @@
       font-size: 22px
     .box-main
       padding: 20px
+      .xlabel
+        display: block
+        font-size: 12px
+        color: #{$mainc}
+        text-shadow: 0px 2px 3px #333
+      .xvalue
+        display: block
+        font-size: 24px
+        font-weight: bold
+        text-shadow: 0px 2px 3px #333
       ul
         list-style-type: none
         margin: 0
         padding: 0
         &.list-icon
+          margin-bottom: 20px
           li
             position: relative
             padding-left: 60px
@@ -34,26 +39,17 @@
               height: 0
               border: 0
               margin-left: -25%
-            &:nth-child(3n+1)
-              margin-bottom: 15px
-              &:after
-                border-bottom: 1px solid #fff
+              border-bottom: 1px solid #fff
             &.icon
               height: 50px
             &.title
               color: #{$mainc}
               font-size: 32px
               text-shadow: 0px 2px 3px #333
-            .xlabel
-              display: block
-              font-size: 12px
-              color: #{$mainc}
-              text-shadow: 0px 2px 3px #333
-            .xvalue
-              display: block
-              font-size: 24px
-              font-weight: bold
-              text-shadow: 0px 2px 3px #333
+              text-align: center
+              padding: 0
+              &:after
+                border-bottom: 1px solid #fff
     .box-footer
       padding: 20px 125px
       overflow: auto
@@ -76,3 +72,12 @@
         margin: 0 0 0 5px
       .progress
         margin: 12px
+  #members
+    .member
+      padding: 10px 0
+      .username
+        font-size: 24px
+        a
+          color: #{$mainc}
+      .icon
+        margin-right: 7px

@@ -35,4 +35,9 @@ function membershipType($id)
       return 'private';
   }
 }
+function weapon($weapon)
+{
+  $tmp = explode('_', $weapon);
+  return translate(is_array($tmp) && count($tmp) ? $tmp[1] : $weapon);
+}
 ?>
