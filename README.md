@@ -4,7 +4,7 @@ The xGhost Project has been developed for those Call of Duty Ghosts' player that
 
 * [iOS](https://itunes.apple.com/en/app/call-of-duty/id733712309)
 * [Android](https://play.google.com/store/apps/details?id=com.activision.callofduty.mobile)
-* [Windows 8](http://apps.microsoft.com/windows/en-us/app/call-of-duty/1fa9f76d-41de-40e6-bb04-8ee90182c1b9).
+* [Windows 8](http://apps.microsoft.com/windows/en-us/app/call-of-duty/1fa9f76d-41de-40e6-bb04-8ee90182c1b9)
 
 For example, in my clan there are some players that:
 
