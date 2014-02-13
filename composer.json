@@ -1,5 +1,12 @@
 {
   "require": {
+    "php": ">=5.4.0",
     "zendframework/zend-http": "2.0.*"
+  },
+  "extra": {
+    "heroku": {
+      "document-root": "public",
+      "index-document": "index.php"
+    }
   }
 }
