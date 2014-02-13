@@ -34,27 +34,65 @@
         <h1>
 <a name="the-xghost-project" class="anchor" href="#the-xghost-project"><span class="octicon octicon-link"></span></a>The xGhost Project</h1>
 
-<h2>
-<a name="a-call-of-duty-app-web-based" class="anchor" href="#a-call-of-duty-app-web-based"><span class="octicon octicon-link"></span></a>a Call of Duty App Web Based</h2>
+<p>The xGhost Project has been developed for those Call of Duty Ghosts' player that for many reason doesn't feel good with the provided apps <a href="https://itunes.apple.com/en/app/call-of-duty/id733712309">iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.mobile">Android</a> or <a href="http://apps.microsoft.com/windows/en-us/app/call-of-duty/1fa9f76d-41de-40e6-bb04-8ee90182c1b9">Windows 8</a>.</p>
+
+<p>For example in my clan there are some players that:</p>
+
+<ul>
+<li>doesn't have a smartphone/tablet</li>
+<li>got a Windows Phone where no app was developed</li>
+<li>an old slow ( like me ) smartphone</li>
+</ul><p>and that's getting frustrated Clan War after Clan War cause as leader they all spam for know are we ranked or what target to attack!!</p>
+
+<p>For some reason there is no Web App about that and, since I am a web developer, I decided to make it on my own and share it with the community!</p>
 
 <h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>The application aim to <strong>read only</strong> your data so With the xGhost Web App you can access to:</p>
+
+<ul>
+<li>your stats</li>
+<li>your clan stats/member/member stats</li>
+<li>your current war ( if there is one running )</li>
+<li>your war history</li>
+</ul><h2>
 <a name="license-" class="anchor" href="#license-"><span class="octicon octicon-link"></span></a>License <img src="http://i.creativecommons.org/l/by-nc-sa/3.0/nl/88x31.png" alt="creative commons Attribution-NonCommercial-ShareAlike 4.0 International">
 </h2>
 
 <p>This software is under the creative commons <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">Attribution-NonCommercial-ShareAlike 4.0 International</a>, under the following terms:</p>
 
 <ul>
-<li>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use</li>
-<li>NonCommercial — You may not use the material for commercial purposes.</li>
-<li>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+<li>
+<strong>Attribution</strong> — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use</li>
+<li>
+<strong>NonCommercial</strong> — You may not use the material for commercial purposes.</li>
+<li>
+<strong>ShareAlike</strong> — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
 </ul><p>so you might:</p>
 
 <ul>
-<li>Share — copy and redistribute the material in any medium or format</li>
-<li>Adapt — remix, transform, and build upon the material</li>
-</ul><p>Call of Duty Ghosts Web Interface</p>
+<li>
+<strong>Share</strong> — copy and redistribute the material in any medium or format</li>
+<li>
+<strong>Adapt</strong> — remix, transform, and build upon the material</li>
+</ul><hr><h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
-<p>heroku create --buildpack <a href="https://github.com/CHH/heroku-buildpack-php">https://github.com/CHH/heroku-buildpack-php</a></p>
+<p>The only requirement is a web server with PHP 5.4.0+</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>If you wanna install it just download the zip and upload it on your own hosting! Isn't it easy?</p>
+
+<hr><h2>
+<a name="deploying-on-heroku" class="anchor" href="#deploying-on-heroku"><span class="octicon octicon-link"></span></a>Deploying on Heroku</h2>
+
+<p>If you are an Heroku user you can easily deploy your app by using this custom buildpack that includes <a href="https://getcomposer.org/">composer</a> support and DocumentRoot setup</p>
+
+<pre><code>heroku create --buildpack https://github.com/CHH/heroku-buildpack-php my-app-name
+</code></pre>
       </section>
     </div>
 
