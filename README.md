@@ -21,7 +21,6 @@ For some unknown reasons there was still no Web App to provide those useful info
 
 The application aim to __read only__ your data so with the xGhost Web App you can access to:
 - your player stats
->>>>>>> b433dfe827cdc7efae4d782841dfb16e2c5467dd
 - your clan stats/member/member stats
 - your current war (if there is one running)
 - your war history
