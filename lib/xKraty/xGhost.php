@@ -9,10 +9,8 @@
   Play Store: https://play.google.com/store/apps/details?id=com.activision.callofduty.mobile
   Windows Store: http://apps.microsoft.com/windows/en-us/app/call-of-duty/1fa9f76d-41de-40e6-bb04-8ee90182c1b9
 
-  require Zend_Http_Client
-  require Zend_Loader
-  require Zend_Uri
-  require Zend_Validate
+  require Zend\Http\Client
+
 
   @__construct [filename]
     setup client and vars
@@ -83,6 +81,7 @@ class xGhost {
           $this->_user = new \stdClass();
           $this->_user->username = $account_info->User->accountList->account->username;
           $this->_user->ucdID = $account_info->User->ucdID;
+          $this->_user->network = $this->_checkNetwork($account_info->User);
           $cookies = $this->_client->getCookies();
           if ( $cookies && count($cookies) ) {
             foreach ( $cookies as $cookie ) {
@@ -104,13 +103,14 @@ class xGhost {
     unset($_SESSION['xGhost']);
   }
 
-  public function userStats($ucdID = false)
+  public function userStats($ucdID = false, $network = false)
   {
     $ucdID = $ucdID ? $ucdID : $this->_user->ucdID;
+    $network = $network ? $network : $this->_user->network;
     if ( $this->_client && $this->_user) {
       $params = array(
         'session_token' => $this->_user->session_token,
-        'bh_network' => 'steam', //steam, psn, xbl
+        'bh_network' => $network, //steam, psn, xbl
         'config_check' => 'false'
       );
       $this->_client->setMethod('GET');
@@ -197,6 +197,17 @@ class xGhost {
       }
       return false;
     }
+  }
+
+  // Looking for which network the user come from, it's needed for stats request
+  protected function _checkNetwork($user)
+  {
+    if ( $user->newPsnID || $user->psnID ) {
+      return 'psn';
+    } else if ( $user->xblID ) {
+      return 'xbl';
+    }
+    return 'steam';
   }
 
   /* prestige params seems bugged

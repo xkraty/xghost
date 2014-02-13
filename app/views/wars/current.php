@@ -21,8 +21,17 @@
         </span>
       </div>
       <div class="box-main">
-        <div class="clearfix">
-        </div>
+        <table class="table">
+          <?php foreach ( $progress as $clan_id => $score): ?>
+            <?php if ( $tmp->clan_owner_number != $clan_id ): ?>
+              <tr>
+                <td style="width: 30px"><img src="<?=CLANEMBLEM_SMALL.$war->clans->{$clan_id}->clan_id?>"></td>
+                <td><?=$war->clans->{$clan_id}->name?></td>
+                <td style="width: 30px"><?=$score?></td>
+              </tr>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        </table>
       </div>
       <div class="box-footer">
         Bonus <?=$target->reward_exp_percent?> % Exp
