@@ -1,35 +1,36 @@
 # The xGhost Project
 
-The xGhost Project has been developed for those Call of Duty Ghosts' player that for many reason doesn't feel good with the provided apps [iOS](https://itunes.apple.com/en/app/call-of-duty/id733712309), [Android](https://play.google.com/store/apps/details?id=com.activision.callofduty.mobile) or [Windows 8](http://apps.microsoft.com/windows/en-us/app/call-of-duty/1fa9f76d-41de-40e6-bb04-8ee90182c1b9).
+The xGhost Project has been developed for those Call of Duty Ghosts' player that, for many reasons, doesn't feel good with the provided apps:
 
-For example in my clan there are some players that:
-- doesn't have a smartphone/tablet
-- got a Windows Phone where no app was developed
-- an old slow ( like me ) smartphone
+* [iOS](https://itunes.apple.com/en/app/call-of-duty/id733712309)
+* [Android](https://play.google.com/store/apps/details?id=com.activision.callofduty.mobile)
+* [Windows 8](http://apps.microsoft.com/windows/en-us/app/call-of-duty/1fa9f76d-41de-40e6-bb04-8ee90182c1b9).
 
-and that's getting frustrated Clan War after Clan War cause as leader they all spam for know are we ranked or what target to attack!!
+For example, in my clan there are some players that:
 
-For some reason there is no Web App about that and, since I am a web developer, I decided to make it on my own and share it with the community!
+- don't have a smartphone or a tablet
+- have a Windows Phone whose version is not supported
+- (like me) have an old, slow smartphone
+
+and that get even more frustrating!
+When doing Clan Wars, leaders get spammed by teammates by questions such as "What's our rank?" or "Who should we attack next?".
+
+For some unknown reasons there was still no Web App to provide those useful informations and, since I am a web developer, I decided to change that by making  that Web App on my own and by sharing it with the community!
 
 ## About
 
-The application aim to __read only__ your data so With the xGhost Web App you can access to:
-- your stats
+The application aim to __read only__ your data so with the xGhost Web App you can access to:
+
+- your player stats
 - your clan stats/member/member stats
-- your current war ( if there is one running )
+- your current war (if there is one running)
 - your war history
 
-## License ![creative commons Attribution-NonCommercial-ShareAlike 4.0 International](http://i.creativecommons.org/l/by-nc-sa/3.0/nl/88x31.png)
+## License
 
-This software is under the creative commons [Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), under the following terms:
-* __Attribution__ — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use
-* __NonCommercial__ — You may not use the material for commercial purposes.
-* __ShareAlike__ — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+![creative commons Attribution-NonCommercial-ShareAlike 4.0 International](http://i.creativecommons.org/l/by-nc-sa/3.0/nl/88x31.png)
 
-so you might:
-
-* __Share__ — copy and redistribute the material in any medium or format
-* __Adapt__ — remix, transform, and build upon the material
+See [LICENSE](https://github.com/xkraty/xghost/blob/master/LICENSE) for more info.
 
 ***
 
