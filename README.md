@@ -20,7 +20,6 @@ For some unknown reasons there was still no Web App to provide those useful info
 ## About
 
 The application aim to __read only__ your data so with the xGhost Web App you can access to:
-
 - your player stats
 - your clan stats/member/member stats
 - your current war (if there is one running)
@@ -38,7 +37,7 @@ See [LICENSE](https://github.com/xkraty/xghost/blob/master/LICENSE) for more inf
 The only requirement is a web server with PHP 5.4.0+
 
 ## Installation
-If you wanna install it just download the zip and upload it on your own hosting! Isn't it easy?
+If you wanna install it just download the [zip](https://github.com/xkraty/xghost/zipball/master) and upload it on your own hosting! Isn't it easy?
 
 ***
 ## Deploying on Heroku
