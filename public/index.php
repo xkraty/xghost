@@ -50,12 +50,21 @@ switch($action)
     if ( $war ) {
       $content = VIEWS . 'wars/current.php';
     } else {
-      // redirect to global war
-      die('no war, redirected needed here');
+      header("location: index.php?a=warshistory&s=nowar");
     }
   break;
+  case 'warshistory':
+    $content = VIEWS . 'wars/history.php';
+  break;
+  case 'language':
+    $_SESSION['xGhost']['locale'] = $_GET['to'];
+    if ( isset($_SERVER['HTTP_REFERER']) ) {
+      // d('od1'.$_SERVER['HTTP_REFERER'], 1);
+      header("Location:".$_SERVER['HTTP_REFERER']);
+      break;
+    }
   default:
-    header("location: index.php?a=stats&s=redir");
+    header("Location: index.php?a=stats&s=redir");
 }
 
 // Include header

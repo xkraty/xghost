@@ -28,7 +28,7 @@
 
 session_start();
 // Setup global paths
-define('TITLE', 'CoD xGhosts');
+define('TITLE', 'xGhosts');
 define('BASEPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 define('APP', BASEPATH . 'app' . DIRECTORY_SEPARATOR);
 define('CONFIGDIR', APP . 'config' . DIRECTORY_SEPARATOR);
@@ -42,6 +42,9 @@ define('PATCHES', 'https://widget.live-ca.callofduty.com/img/patches/');
 define('BASEEMBLEM', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmblem?title=ghosts&imgtype=png&background=0&size=');
 define('CLANEMBLEM', BASEEMBLEM . '45&clan_id=');
 define('CLANEMBLEM_SMALL', BASEEMBLEM . '30&clan_id=');
+
+// Default language
+define('LOCALE', 'en');
 
 // Date format
 define('DATE_FORMAT', 'd/m/Y'); // set it to m/d/Y for US format
@@ -57,8 +60,12 @@ set_include_path(
 // Autoload
 require_once 'vendor/autoload.php';
 // Translations
-$language = 'it_IT';
-$_SESSION['xGhost']['translate'] = require_once LANGUAGES.$language.'.php';
+if ( !isset($_SESSION['xGhost']['locale']) || !$_SESSION['xGhost']['locale'] ) {
+  $locale = LOCALE;
+} else {
+  $locale = $_SESSION['xGhost']['locale'];
+}
+$_SESSION['xGhost']['translate'] = require_once LANGUAGES.$locale.'.php';
 // Misc
 require_once 'functions.php';
 
