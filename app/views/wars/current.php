@@ -1,13 +1,35 @@
 <h2><?=$war->war->flavor_text?></h2>
 <p><?=dateFormat($war->war->valid_start_time, '%d-%m-%Y', true)?> to <?=dateFormat($war->war->valid_end_time)?> now <?=dateFormat($war->now)?></p>
-<div id="mycod">
+<div class="currentwar-view">
   <?php foreach ( $war->war->targets as $k => $target ): ?>
     <?php
       $tmp = $war->targets->{$k};
       $progress = (array) $tmp->progress;
       arsort($progress);
     ?>
-    <div class="panel active col-md-6"><?=$translate[$target->game_mode]?> Bonus <?=$target->reward_exp_percent?> % Exp - Points <?=$tmp->clan_points?> - Capture <?=$tmp->threshold?>
+    <div class="col-md-4 animated fadeIn box">
+      <?php
+        $owner_img = 'http://placehold.it/45x45';
+        if ( $tmp->clan_owner_number > 0 ) {
+          $owner_img = CLANEMBLEM.$war->clans->{$tmp->clan_owner_number}->clan_id;
+        }
+      ?>
+      <div class="box-header" style="background-image:url('<?=$owner_img?>')">
+        <?=translate($target->game_mode)?>
+        <span class="pull-right">
+          <span class="shield"><?=$tmp->shields?></span> + <span class="treshold"><?=$tmp->threshold?> = <?=$tmp->clan_points?> CP</span>
+        </span>
+      </div>
+      <div class="box-main">
+        <div class="clearfix">
+        </div>
+      </div>
+      <div class="box-footer">
+        Bonus <?=$target->reward_exp_percent?> % Exp
+      </div>
+    </div>
+    <!--
+    <div class="panel active col-md-4"><?=translate($target->game_mode)?> Bonus <?=$target->reward_exp_percent?> % Exp - Points <?=$tmp->clan_points?> - Capture <?=$tmp->threshold?>
       <ul>
         <li><?=$tmp->clan_owner_number > 0 ? '<img src="'.CLANEMBLEM.$war->clans->{$tmp->clan_owner_number}->clan_id.'">'.$war->clans->{$tmp->clan_owner_number}->name." ".$tmp->shields : ''?></li>
         <?php foreach ( $progress as $clan_id => $score): ?>
@@ -16,7 +38,7 @@
           <?php endif; ?>
         <?php endforeach; ?>
       </ul>
-    </div>
+    </div>-->
   <?php endforeach; ?>
 </div>
 

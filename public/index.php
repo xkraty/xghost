@@ -45,8 +45,8 @@ switch($action)
     }
   break;
   case 'currentwar':
-    $war = $ghost->currentWar();
-    // $war = json_decode(file_get_contents('json/clanwar.json'));
+    // $war = $ghost->currentWar();
+    $war = json_decode(file_get_contents('json/clanwar.json'));
     if ( $war ) {
       $content = VIEWS . 'wars/current.php';
     } else {
