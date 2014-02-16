@@ -68,6 +68,11 @@ When doing Clan Wars, leaders get spammed by teammates by questions such as "Wha
 
 <p>See <a href="https://github.com/xkraty/xghost/blob/master/LICENSE">LICENSE</a> for more info.</p>
 
+<h2>
+<a name="disclaimer" class="anchor" href="#disclaimer"><span class="octicon octicon-link"></span></a>Disclaimer</h2>
+
+<p>See <a href="https://github.com/xkraty/xghost/blob/master/app/views/misc/disclaimer.html">disclaimer</a> for more info.</p>
+
 <hr><h2>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
@@ -78,6 +83,8 @@ When doing Clan Wars, leaders get spammed by teammates by questions such as "Wha
 
 <p>If you wanna install it just download the <a href="https://github.com/xkraty/xghost/zipball/master">zip</a> and upload it on your own hosting! Isn't it easy?</p>
 
+<p>Note: if you know how to, you should set the DocumentRoot of your virtual host to the <a href="https://github.com/xkraty/xghost/tree/master/public">public/ dir</a></p>
+
 <hr><h2>
 <a name="deploying-on-heroku" class="anchor" href="#deploying-on-heroku"><span class="octicon octicon-link"></span></a>Deploying on Heroku</h2>
 
@@ -85,6 +92,40 @@ When doing Clan Wars, leaders get spammed by teammates by questions such as "Wha
 
 <pre><code>heroku create --buildpack https://github.com/CHH/heroku-buildpack-php my-app-name
 </code></pre>
+
+<h2>
+<a name="customization-optional" class="anchor" href="#customization-optional"><span class="octicon octicon-link"></span></a>Customization (optional)</h2>
+
+<p>In the main directory of your app you can customize the following params in <a href="https://github.com/xkraty/xghost/blob/master/bootstrap.php#L46">bootstrap.php</a>:</p>
+
+<ul>
+<li>LOCALE: is the default language, current available in english (en) and italian(it) only</li>
+<li>DATE_FORMAT: how to display dates ( eg: m/d/Y for US format )</li>
+<li>date_default_timezone_set: check here your country <a href="http://php.net/manual/en/timezones.php">timezones</a>
+</li>
+</ul><h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<h3>
+<a name="localization" class="anchor" href="#localization"><span class="octicon octicon-link"></span></a>Localization</h3>
+
+<p>If your language is missing and you willing to help support it you can just take the <a href="https://github.com/xkraty/xghost/blob/master/app/i18n/en.php">english</a> file and translate the right column leaving the left side keys untouched</p>
+
+<h2>
+<a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues</h2>
+
+<p>Since i doesn't have much free time for any issues you having you might open a <a href="https://github.com/xkraty/xghost/issues">github issue</a> so you can be supported by the community and you may find the solution faster if anyone else had your same issues</p>
+
+<h2>
+<a name="donations" class="anchor" href="#donations"><span class="octicon octicon-link"></span></a>Donations</h2>
+
+<p>If you think this project worth a buck! Buy me a cup of coffee!
+<a href="http://goo.gl/6m2iJ1"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt=""></a></p>
+
+<h2>
+<a name="updates" class="anchor" href="#updates"><span class="octicon octicon-link"></span></a>Updates</h2>
+
+<p>You can follow me on <a href="https://twitter.com/xKraty">twitter</a> for updates and info on <a href="https://twitter.com/search?q=%23xGhost">#xGhost</a></p>
       </section>
     </div>
 
