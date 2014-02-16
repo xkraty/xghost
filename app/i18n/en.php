@@ -36,6 +36,22 @@ return array(
   'winp' => 'Wins %',
   'clan_details' => 'Clan details',
 
+  // Current war view
+  'ranking' => 'Ranking',
+  'diamond' => 'Diamond Division',
+  'platinum' => 'Platinum Division',
+  'gold' => 'Gold Division',
+  'silver' => 'Silver Division',
+  'bronze' => 'Bronze Division',
+  'updated_at' => 'Updated al:',
+  'years' => 'Years',
+  'months' => 'Months',
+  'weeks' => 'Weeks',
+  'days' => 'Days',
+  'hours' => 'Hours',
+  'minutes' => 'Minutes',
+  'seconds' => 'Seconds',
+
   // Weapons
   'bren' => 'SA-805',
   'honeybadger' => 'Honey Badger',
