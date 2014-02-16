@@ -46,8 +46,8 @@ switch($action)
     }
   break;
   case 'currentwar':
-    // $war = $ghost->currentWar();
-    $war = json_decode(file_get_contents('json/clanwar.json'));
+    $war = $ghost->currentWar();
+    // $war = json_decode(file_get_contents('json/clanwar.json'));
     if ( $war ) {
       $content = VIEWS . 'wars/current.php';
     } else {
@@ -60,7 +60,6 @@ switch($action)
   case 'language':
     $_SESSION['xGhost']['locale'] = $_GET['to'];
     if ( isset($_SERVER['HTTP_REFERER']) ) {
-      // d('od1'.$_SERVER['HTTP_REFERER'], 1);
       header("Location:".$_SERVER['HTTP_REFERER']);
       break;
     }
