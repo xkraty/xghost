@@ -41,12 +41,7 @@ The only requirement is a web server with PHP 5.4.0+
 ## Installation
 If you wanna install it just download the [zip](https://github.com/xkraty/xghost/zipball/master) and upload it on your own hosting! Isn't it easy?
 
-## Setup (optional)
-
-In the main directory of your app you can edit the following params in bootstrap.php:
-- LOCALE: is the default language, current available in english (en) and italian(it) only
-- DATE_FORMAT: how to display dates ( eg: m/d/Y for US format )
-- date_default_timezone_set: check here your country [timezones](http://php.net/manual/en/timezones.php)
+Note: if you know how to, you should set the DocumentRoot of your virtual host to the [public/ dir](https://github.com/xkraty/xghost/tree/master/public)
 
 ***
 ## Deploying on Heroku
@@ -57,7 +52,28 @@ If you are an Heroku user you can easily deploy your app by using this custom bu
 heroku create --buildpack https://github.com/CHH/heroku-buildpack-php my-app-name
 ```
 
+## Customization (optional)
+
+In the main directory of your app you can customize the following params in [bootstrap.php](https://github.com/xkraty/xghost/blob/master/bootstrap.php#L46):
+- LOCALE: is the default language, current available in english (en) and italian(it) only
+- DATE_FORMAT: how to display dates ( eg: m/d/Y for US format )
+- date_default_timezone_set: check here your country [timezones](http://php.net/manual/en/timezones.php)
+
+## Contribute
+
+### Localization
+
+If your language is missing and you willing to help support it you can just take the [english](https://github.com/xkraty/xghost/blob/master/app/i18n/en.php) file and translate the right column leaving the left side keys untouched
+
+## Issues
+
+Since i doesn't have much free time for any issues you having you might open a [github issue](https://github.com/xkraty/xghost/issues) so you can be supported by the community and you may find the solution faster if anyone else had your same issues
+
 ## Donations
 
 If you think this project worth a buck! Buy me a cup of coffee!
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](http://goo.gl/6m2iJ1)
+
+## Updates
+
+You can follow me on [twitter](https://twitter.com/xKraty) for updates and info on [#xGhost](https://twitter.com/search?q=%23xGhost)
