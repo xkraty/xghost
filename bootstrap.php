@@ -43,14 +43,16 @@ define('BASEEMBLEM', 'https://api.live-ca.ghosts.callofduty.com/emblems/clanEmbl
 define('CLANEMBLEM', BASEEMBLEM . '45&clan_id=');
 define('CLANEMBLEM_SMALL', BASEEMBLEM . '30&clan_id=');
 
+/******************************************CUSTOMIZE***************************************/
 // Default language
-define('LOCALE', 'en');
+define('LOCALE', 'en'); // set this for default locale, available it, en for now
 
 // Date format
 define('DATE_FORMAT', 'd/m/Y'); // set it to m/d/Y for US format
 
 // Set timezone check http://php.net/manual/en/timezones.php for supported timezone and
 date_default_timezone_set('Europe/Rome'); // edit for different timezone
+/******************************************************************************************/
 
 // Set the include path for libs
 set_include_path(

@@ -32,7 +32,7 @@ The application aim to __read only__ your data so with the xGhost Web App you ca
 See [LICENSE](https://github.com/xkraty/xghost/blob/master/LICENSE) for more info.
 
 ## Disclaimer
-See [app/views/misc/disclaimer.html](https://github.com/xkraty/xghost/blob/master/LICENSE) for more info.
+See [disclaimer](https://github.com/xkraty/xghost/blob/master/app/views/misc/disclaimer.html) for more info.
 ***
 
 ## Requirements
@@ -40,6 +40,13 @@ The only requirement is a web server with PHP 5.4.0+
 
 ## Installation
 If you wanna install it just download the [zip](https://github.com/xkraty/xghost/zipball/master) and upload it on your own hosting! Isn't it easy?
+
+## Setup (optional)
+
+In the main directory of your app you can edit the following params in bootstrap.php:
+- LOCALE: is the default language, current available in english (en) and italian(it) only
+- DATE_FORMAT: how to display dates ( eg: m/d/Y for US format )
+- date_default_timezone_set: check here your country [timezones](http://php.net/manual/en/timezones.php)
 
 ***
 ## Deploying on Heroku
