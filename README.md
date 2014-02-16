@@ -31,6 +31,8 @@ The application aim to __read only__ your data so with the xGhost Web App you ca
 
 See [LICENSE](https://github.com/xkraty/xghost/blob/master/LICENSE) for more info.
 
+## Disclaimer
+See [app/views/misc/disclaimer.html](https://github.com/xkraty/xghost/blob/master/LICENSE) for more info.
 ***
 
 ## Requirements

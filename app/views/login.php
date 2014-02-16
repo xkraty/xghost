@@ -15,7 +15,7 @@
       </div>
       <div class="box-footer">
         <div class="row">
-          Call of Duty Ghosts Web Powered by xKraty
+          <a href="http://xkraty.github.io/xghost/" target="_blank">xGhost</a> Powered by <a href="https://twitter.com/xKraty" target="_blank">xKraty</a>
         </div>
       </div>
     </div>

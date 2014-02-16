@@ -51,6 +51,8 @@ return array(
   'hours' => 'Hours',
   'minutes' => 'Minutes',
   'seconds' => 'Seconds',
+  'treshold' => 'Treshold',
+  'shield' => 'Shield',
 
   // Weapons
   'bren' => 'SA-805',

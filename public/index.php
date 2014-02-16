@@ -64,6 +64,9 @@ switch($action)
       header("Location:".$_SERVER['HTTP_REFERER']);
       break;
     }
+  case 'disclaimer':
+    $content = VIEWS . 'misc/disclaimer.html';
+  break;
   default:
     header("Location: index.php?a=stats&s=redir");
 }

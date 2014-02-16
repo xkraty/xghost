@@ -51,6 +51,8 @@ return array(
   'hours' => 'Ore',
   'minutes' => 'Minuti',
   'seconds' => 'Secondi',
+  'treshold' => 'Soglia',
+  'shield' => 'Scudo',
 
   // Weapons
   'bren' => 'SA-805',
