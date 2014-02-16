@@ -40,4 +40,25 @@ function weapon($weapon)
   $tmp = explode('_', $weapon);
   return translate(is_array($tmp) && count($tmp) ? $tmp[1] : $weapon);
 }
+function warDivision($division)
+{
+  switch ($division) {
+    case 0:
+      return translate('diamond');
+      break;
+    case 1:
+      return translate('platinum');
+      break;
+    case 2:
+      return translate('gold');
+    case 3:
+      return translate('silver');
+    case 3:
+      return translate('bronze');
+
+    default:
+      return translate('unknown');
+      break;
+  }
+}
 ?>

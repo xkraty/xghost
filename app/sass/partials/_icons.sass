@@ -3,16 +3,27 @@
   background-image: url(#{$img}icons.png)
   background-position: left center
   background-repeat: no-repeat
+  &.small
+    background-image: url(#{$img}small_icons.png)
 span
   &.icon
     height: 50px
     width: 50px
     float: left
     display: block
+    &.small
+      height: 25px
+      width: 25px
 $i: 0
 @each $icon in $icons
   .icon-#{$icon}
     background-position: 0 -#{$i*50}px
+  $i: $i + 1
+
+$i: 0
+@each $icon in $small_icons
+  .icon-#{$icon}
+    background-position: -#{$i*25}px 0
   $i: $i + 1
   /* =================== RANKS ====================== */
 .level
@@ -20,50 +31,50 @@ $i: 0
   height: 50px
   width: 50px
   float: left
-.level.level-1, .level.level-2
-  background-position: 0 0px
-.level.level-3, .level.level-4
-  background-position: 0 -50px
-.level.level-5, .level.level-6
-  background-position: 0 -100px
-.level.level-7, .level.level-8
-  background-position: 0 -150px
-.level.level-9, .level.level-10
-  background-position: 0 -200px
-.level.level-11, .level.level-12, .level.level-13
-  background-position: 0 -250px
-.level.level-14, .level.level-15, .level.level-16
-  background-position: 0 -300px
-.level.level-17, .level.level-18, .level.level-19
-  background-position: 0 -350px
-.level.level-20, .level.level-21, .level.level-22
-  background-position: 0 -400px
-.level.level-23, .level.level-24, .level.level-25
-  background-position: 0 -450px
-.level.level-26, .level.level-27, .level.level-28
-  background-position: 0 -500px
-.level.level-29, .level.level-30, .level.level-31
-  background-position: 0 -550px
-.level.level-32, .level.level-33, .level.level-34
-  background-position: 0 -600px
-.level.level-35, .level.level-36, .level.level-37
-  background-position: 0 -650px
-.level.level-38, .level.level-39, .level.level-40
-  background-position: 0 -700px
-.level.level-41, .level.level-42, .level.level-43
-  background-position: 0 -750px
-.level.level-44, .level.level-45, .level.level-46
-  background-position: 0 -800px
-.level.level-47, .level.level-48, .level.level-49
-  background-position: 0 -850px
-.level.level-50, .level.level-51, .level.level-52
-  background-position: 0 -900px
-.level.level-53, .level.level-54, .level.level-55
-  background-position: 0 -950px
-.level.level-56, .level.level-57, .level.level-58, .level.level-59
-  background-position: 0 -1000px
-.level.level-60
-  background-position: 0 -1050px
+  &.level-1, &.level-2
+    background-position: 0 0px
+  &.level-3, &.level-4
+    background-position: 0 -50px
+  &.level-5, &.level-6
+    background-position: 0 -100px
+  &.level-7, &.level-8
+    background-position: 0 -150px
+  &.level-9, &.level-10
+    background-position: 0 -200px
+  &.level-11, &.level-12, &.level-13
+    background-position: 0 -250px
+  &.level-14, &.level-15, &.level-16
+    background-position: 0 -300px
+  &.level-17, &.level-18, &.level-19
+    background-position: 0 -350px
+  &.level-20, &.level-21, &.level-22
+    background-position: 0 -400px
+  &.level-23, &.level-24, &.level-25
+    background-position: 0 -450px
+  &.level-26, &.level-27, &.level-28
+    background-position: 0 -500px
+  &.level-29, &.level-30, &.level-31
+    background-position: 0 -550px
+  &.level-32, &.level-33, &.level-34
+    background-position: 0 -600px
+  &.level-35, &.level-36, &.level-37
+    background-position: 0 -650px
+  &.level-38, &.level-39, &.level-40
+    background-position: 0 -700px
+  &.level-41, &.level-42, &.level-43
+    background-position: 0 -750px
+  &.level-44, &.level-45, &.level-46
+    background-position: 0 -800px
+  &.level-47, &.level-48, &.level-49
+    background-position: 0 -850px
+  &.level-50, &.level-51, &.level-52
+    background-position: 0 -900px
+  &.level-53, &.level-54, &.level-55
+    background-position: 0 -950px
+  &.level-56, &.level-57, &.level-58, &.level-59
+    background-position: 0 -1000px
+  &.level-60
+    background-position: 0 -1050px
 /* =================== PRESTIGES ====================== */
 .prestige
   background-image: url(#{$img}prestiges.png)

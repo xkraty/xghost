@@ -47,3 +47,8 @@ If you are an Heroku user you can easily deploy your app by using this custom bu
 ```
 heroku create --buildpack https://github.com/CHH/heroku-buildpack-php my-app-name
 ```
+
+## Donations
+
+If you think this project worth a buck! Buy me a cup of coffee!
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](http://goo.gl/6m2iJ1)

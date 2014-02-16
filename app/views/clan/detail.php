@@ -30,7 +30,7 @@
               <span class="icon icon-<?=membershipType($member->membershipType)?>"></span>
             </div>
             <div class="col-md-6 username">
-              <a href="index.php?a=stats&id=<?=$member->userId?>"><?=$member->userName?></a>
+              <a href="index.php?a=stats&id=<?=$member->userId?>&network=<?=$member->network?>"><?=$member->userName?></a>
             </div>
             <div class="col-md-2">
               <span class="icon icon-kdr"></span>

@@ -36,6 +36,22 @@ return array(
   'winp' => 'Vittorie',
   'clan_details' => 'Dettagli Clan',
 
+  // Current war view
+  'ranking' => 'Classifica',
+  'diamond' => 'Divisione Diamante',
+  'platinum' => 'Divisione Platino',
+  'gold' => 'Divisione Oro',
+  'silver' => 'Divisione Argento',
+  'bronze' => 'Divisione Bronzo',
+  'updated_at' => 'Aggiornato al:',
+  'years' => 'Anni',
+  'months' => 'Mesi',
+  'weeks' => 'Settimane',
+  'days' => 'Giorni',
+  'hours' => 'Ore',
+  'minutes' => 'Minuti',
+  'seconds' => 'Secondi',
+
   // Weapons
   'bren' => 'SA-805',
   'honeybadger' => 'Honey Badger',
@@ -77,6 +93,8 @@ return array(
   'mk32' => 'MK32',
   'rgm' => 'Kastet',
   'panzerfaust3' => 'Panzerfaust',
+  'dlcweap01' => 'Maverick',
+  'dlcweap02' => 'Maverick',
 
   'empty' => ''
 );

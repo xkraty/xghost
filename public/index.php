@@ -31,7 +31,8 @@ switch($action)
   break;
   case 'stats':
     $id = isset($_GET['id']) ? $_GET['id'] : false;
-    $stats = $ghost->userStats($id);
+    $network = isset($_GET['network']) ? $_GET['network'] : false;
+    $stats = $ghost->userStats($id, $network);
     // d($stats, 1);
     $content = VIEWS . 'user/stats.php';
   break;

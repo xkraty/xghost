@@ -1,50 +1,24 @@
 /* =================== STATS ====================== */
 .currentwar-view
+  #warcountdown
+    color: #{$mainc}
   .box
-    margin-top: 30px
+    margin-top: 60px
     .box-header
       padding-left: 60px
+      padding-right: 10px
       background-repeat: no-repeat
       background-position: 5px center
       text-shadow: 0px 2px 3px #555
       font-size: 22px
+      .stats
+        span
+          padding: 0 5px
     .box-main
       padding: 20px
-      ul
-        list-style-type: none
+      .table
         margin: 0
-        padding: 0
-        &.list-icon
-          li
-            position: relative
-            padding-left: 60px
-            margin: 8px 0
-            &:after
-              position: absolute
-              bottom: -5px
-              left: 50%
-              content: ''
-              width: 50%
-              height: 0
-              border: 0
-              margin-left: -25%
-            &:nth-child(3n+1)
-              margin-bottom: 15px
-              &:after
-                border-bottom: 1px solid #fff
-            &.icon
-              height: 50px
-            &.title
-              color: #{$mainc}
-              font-size: 32px
-              text-shadow: 0px 2px 3px #333
-            .xlabel
-              display: block
-              font-size: 12px
-              color: #{$mainc}
-              text-shadow: 0px 2px 3px #333
-            .xvalue
-              display: block
-              font-size: 24px
-              font-weight: bold
-              text-shadow: 0px 2px 3px #333
+    .box-footer
+      padding: 20px
+      color: #fff
+      font-size: 14px
