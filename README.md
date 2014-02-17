@@ -1,4 +1,4 @@
-# The xGhost Project
+# The xGhost Project - v. Alpha
 
 The xGhost Project has been developed for those Call of Duty Ghosts' player that, for many reasons, doesn't feel good with the provided apps:
 
@@ -16,6 +16,35 @@ and that get even more frustrating!
 When doing Clan Wars, leaders get spammed by teammates by questions such as "What's our rank?" or "Who should we attack next?".
 
 For some unknown reasons there was still no Web App to provide those useful informations and, since I am a web developer, I decided to change that by making  that Web App on my own and by sharing it with the community!
+
+What's cool about xGhost? xGhost it's responsive so it has no device restriction, it should adapt to kinda every resolution and it's 10x faster than the app! You can use with every smartphone, computer and tablet, you could even check your clan war status with the washing machine if it has a browser and trust me one day it will have a browser!!
+![xghost showcase](http://oi57.tinypic.com/29yjl6w.jpg)
+
+## Alpha version
+
+xGhost is under development so it still poor and bugged but it should be helpfull, i rushed the alpha release due to the incoming war but i'm already studying a new stunning layout and features to add! Any tip, critic, suggestion help is appreciated :)
+
+A [live demo](http://web-ghost.herokuapp.com/public/index.php) is available!
+
+### F.A.Q.
+
+1 How do i log in?
+- You simply login with your Call of Duty account!
+
+2 What? I should use my CoD account on your site?
+- No you __DON'T__ have, if you wish to try it you can use it but you still can download it. There is no database and password are not stored, i wouldn't care anyway of your CoD account; i has mine!
+
+3 How do i install it?
+- If you met the requirements just follow the __1 step__ installation, scroll down
+
+4 Nah! I don't trust you i won't give you my CoD password!
+- Ok [bye](http://www.google.com)!
+
+5 What if i fell in love with you?
+- Chocolate is always appreciated :)
+
+6 Any other stupid F.A.Q. ?
+- No, i'm done!
 
 ## About
 
